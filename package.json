@@ -1,0 +1,29 @@
+{
+  "name": "eatkravelove",
+  "version": "1.0.0",
+  "description": "EatKraveLove - Chef Sank",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelpaulcuccia/eatkravelove.git"
+  },
+  "author": "Michael-Paul Cuccia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelpaulcuccia/eatkravelove/issues"
+  },
+  "homepage": "https://github.com/michaelpaulcuccia/eatkravelove#readme",
+  "dependencies": {
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
