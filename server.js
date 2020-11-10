@@ -47,11 +47,11 @@ app.use(session({
     }
 }));
 
-//Test Route
-app.get('/', (req, res) => res.send('API Running'));
+//*** MIDDLEWARE ****
 
 //routes
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/login', require('./routes/api/login'));
 
 app.listen(PORT, () => {
     console.log(`Server listening on Port ${PORT}`);

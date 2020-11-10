@@ -5,8 +5,8 @@ const User = require('../../models/User');
 const session = require('express-session');
 
 //REGISTE A NEW USER
-//ROUTE: api/users
-router.post('/', async (req, res) => {
+//ROUTE: api/users/register
+router.post('/register', async (req, res) => {
 
     //destructure request
     const { name, email, password } = req.body;
@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
         //saves to database
         await user.save();
 
+        //response with session data 
         res.status(201).send(`${user.name} added! Session: ${JSON.stringify(req.session)}`)
 
     } catch (err) {
