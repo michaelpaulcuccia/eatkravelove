@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/User');
+const session = require('express-session');
 
+//REGISTE A NEW USER
 //ROUTE: api/users
 router.post('/', async (req, res) => {
 
@@ -33,35 +35,13 @@ router.post('/', async (req, res) => {
         //saves to database
         await user.save();
 
-        res.status(201).send(`${user.name} added!`)
+        res.status(201).send(`${user.name} added! Session: ${JSON.stringify(req.session)}`)
 
     } catch (err) {
         console.error(err.message)
         res.status(500).send('Server Error');
     }
 
-});
-
-//ROUTE: api/users/login
-router.post('/login', async (req, res) => {
-
-    const user = users.find(user => user.name = req.body.name);
-
-    if (user === null) {
-        return res.status(400).send('Cannot find user');
-    }
-
-    try {
-
-        if (await bcrypt.compare(req.body.password, user.password)) {
-            res.send('Password matches!')
-        } else {
-            res.send('Passwords did NOT match')
-        }
-
-    } catch (err) {
-        console.error(err.message)
-    }
 });
 
 module.exports = router;
