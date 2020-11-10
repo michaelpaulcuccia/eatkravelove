@@ -10,12 +10,12 @@ router.post('/', async (req, res) => {
     //destructure request
     const { name, email, password } = req.body;
 
-    //check for email and password
-    if (!name || !email || !password) {
-        return res.status(401).json({ errors: [{ msg: 'Must provide name, email, and password' }] });
-    }
-
     try {
+
+        //check for email and password
+        if (!name || !email || !password) {
+            return res.status(401).json({ errors: [{ msg: 'Must provide name, email, and password' }] });
+        }
 
         //check for user
         let user = await User.findOne({ email });
@@ -36,11 +36,12 @@ router.post('/', async (req, res) => {
             password: hashedPassword
         });
 
-        //saves to database
+        //save to database
         await user.save();
 
-        //response with session data 
-        res.status(201).send(`${user.name} added! Session: ${JSON.stringify(req.session)}`);
+        //response 
+        //with session data - ${JSON.stringify(req.session)}
+        res.status(201).send(`${user.name} added!`);
 
         //REDIRECT TO LOGIN PAGE
         //return res.redirect('/login')

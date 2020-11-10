@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 //ROUTE: api/login 
 router.post('/', async (req, res) => {
 
+    //destructure request
     const { email, password } = req.body;
 
     try {
