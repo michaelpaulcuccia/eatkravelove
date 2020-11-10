@@ -1,29 +1,52 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-
-const users = [];
+const User = require('../../models/User');
 
 //ROUTE: api/users
 router.post('/', async (req, res) => {
 
-    try {
-        const salt = await bcrypt.genSalt();
-        const hashedPassword = await bcrypt.hash(req.body.password, salt);
-        const user = { name: req.body.name, password: hashedPassword };
+    //destructure request
+    const { name, email, password } = req.body;
 
-        users.push(user);
+    try {
+
+        //check for user
+        let user = await User.findOne({ email });
+
+        //See if User Exists
+        if (user) {
+            return res.status(400).json({ errors: [{ msg: 'User already exists' }] })
+        }
+
+        //encrypt password
+        const salt = await bcrypt.genSalt();
+        const hashedPassword = await bcrypt.hash(password, salt);
+
+        //create an instance of a User - NOTE:  doesn't create until calling .save()
+        user = new User({
+            name,
+            email,
+            password: hashedPassword
+        });
+
+        //saves to database
+        await user.save();
+
         res.status(201).send(`${user.name} added!`)
 
     } catch (err) {
         console.error(err.message)
+        res.status(500).send('Server Error');
     }
 
 });
 
 //ROUTE: api/users/login
 router.post('/login', async (req, res) => {
+
     const user = users.find(user => user.name = req.body.name);
+
     if (user === null) {
         return res.status(400).send('Cannot find user');
     }
