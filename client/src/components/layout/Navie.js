@@ -10,9 +10,12 @@ export const Navie = props => {
             <Navbar.Brand href="/">EatKraveLove</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Link to='/register'>Register</Link>
-                    <Link to='/login'>Login</Link>
+                <Nav style={{ marginLeft: '1000px' }}>
+                    <Link style={{ marginRight: '15px' }} to='/register'>Register</Link>
+                    <Link style={{ marginRight: '15px' }} to='/login'>Login</Link>
+                    {props.showLogOut &&
+                        <Link to='/logout'>Logout</Link>
+                    }
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
