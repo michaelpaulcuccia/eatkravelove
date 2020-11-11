@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const User = require('../../models/User');
 const bcrypt = require('bcrypt');
+const config = require('config');
+const jwt = require('jsonwebtoken');
 
 //LOGIN
 //ROUTE: api/login 
@@ -32,13 +34,23 @@ router.post('/', async (req, res) => {
             return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
         }
 
-        //assign session an ID from the user ID
-        req.session.userID = user._id
+        //create payload with user._id generated in MongoDB
+        //mongoose doesn't require ._id
+        const payload = {
+            user: {
+                id: user.id
+            }
+        }
 
-        res.send(`Hello ${user.name}, you are logged in!`)
-
-        //REDIRECT TO HOME PAGE
-        //return res.redirect('/home')
+        //Return jsonwebtoken
+        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 36000 }, (err, token) => {
+            if (err) {
+                throw err
+            } else {
+                //send token to client in res
+                res.json({ token });
+            }
+        });
 
     } catch (err) {
         console.error(err.message)

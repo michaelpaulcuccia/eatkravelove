@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 
 const Register = () => {
 
     const { register, handleSubmit, reset } = useForm();
+    const [token, setToken] = useState('')
 
     const onSubmit = async data => {
         console.log(data)
@@ -24,7 +25,10 @@ const Register = () => {
             //make request
             const req = await axios.post('api/register', body, config);
 
-            console.log(req);
+            console.log(req)
+
+            //set token to state
+            setToken(req.data.token)
 
             //clear form
             reset()

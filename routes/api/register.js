@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/User');
+const config = require('config');
+const jwt = require('jsonwebtoken');
 
 //REGISTE A NEW USER
 //ROUTE: api/register
@@ -39,12 +41,23 @@ router.post('/', async (req, res) => {
         //save to database
         await user.save();
 
-        //response 
-        //with session data - ${JSON.stringify(req.session)}
-        res.status(201).send(`${user.name} added!`);
+        //create payload with user._id generated in MongoDB
+        //mongoose doesn't require ._id
+        const payload = {
+            user: {
+                id: user.id
+            }
+        }
 
-        //REDIRECT TO LOGIN PAGE
-        //return res.redirect('/login')
+        //Return jsonwebtoken
+        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 36000 }, (err, token) => {
+            if (err) {
+                throw err
+            } else {
+                //send token to client in res
+                res.json({ token });
+            }
+        });
 
     } catch (err) {
         console.error(err.message)
