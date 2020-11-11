@@ -11,19 +11,21 @@ import Logout from './components/Logout';
 const App = () => {
 
   const [token, setToken] = useState('');
-  const [showLogOut, setShowLogOut] = useState(false)
+  const [showLogOut, setShowLogOut] = useState(false);
+
+  const setTokenLocalStorage = async () => {
+
+    localStorage.setItem("x-auth-token", token);
+
+    if (token !== '') {
+      setShowLogOut(!showLogOut)
+    } else {
+      setShowLogOut(showLogOut)
+    }
+
+  };
 
   useEffect(() => {
-    const setTokenLocalStorage = async () => {
-      //set token in local storage - either a token or 'undefined'
-      localStorage.setItem("x-auth-token", token);
-
-      if (token !== '') {
-        setShowLogOut(!showLogOut)
-      } else {
-        setShowLogOut(showLogOut)
-      }
-    }
     setTokenLocalStorage()
   }, [token]);
 
