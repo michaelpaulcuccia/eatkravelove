@@ -1,35 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import UserContext from './context/UserContext';
+import Navie from './components/layout/Navie';
+import Landing from './components/layout/Landing';
 import Register from './components/Register';
 import Login from './components/Login';
 import Logout from './components/Logout';
 
+
 const App = () => {
 
   const [token, setToken] = useState('');
+  const [showLogOut, setShowLogOut] = useState(false)
 
   useEffect(() => {
     const setTokenLocalStorage = async () => {
       //set token in local storage - either a token or 'undefined'
       localStorage.setItem("x-auth-token", token);
+
+      if (token !== '') {
+        setShowLogOut(!showLogOut)
+      } else {
+        setShowLogOut(showLogOut)
+      }
     }
     setTokenLocalStorage()
   }, [token]);
 
   return (
 
-    <div>
+    <Router>
       <UserContext.Provider value={{ token, setToken }}>
-        REGISTER:
-      <Register />
-        <br></br>
-      LOGIN:
-      <Login />
-        <br></br>
-      LOGOUT
-      <Logout />
+        <Fragment>
+          <Navie showLogOut={showLogOut} />
+          <Route exact path='/' component={Landing} />
+          <Switch>
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/logout' component={Logout} />
+          </Switch>
+        </Fragment>
       </UserContext.Provider>
-    </div>
+    </Router>
 
   )
 }
