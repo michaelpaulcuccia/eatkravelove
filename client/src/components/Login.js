@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import UserContext from '../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 
 const Login = () => {
 
     const { register, handleSubmit, reset } = useForm();
+    const { setToken } = useContext(UserContext);
 
     const onSubmit = async data => {
         console.log(data)
@@ -24,7 +26,7 @@ const Login = () => {
             //make request
             const req = await axios.post('api/login', body, config);
 
-            console.log(req);
+            setToken(req.data.token);
 
             //clear form
             reset()
