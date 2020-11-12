@@ -11,7 +11,6 @@ const Login = () => {
     const history = useHistory();
 
     const onSubmit = async data => {
-        console.log(data)
 
         try {
 
@@ -37,7 +36,7 @@ const Login = () => {
             history.push('/');
 
         } catch (err) {
-            console.log(err.response.data)
+            console.log(err.response.data);
         }
     }
 
@@ -47,7 +46,7 @@ const Login = () => {
                 <label htmlFor='email'>Email:</label>
                 <input name='email' type='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required ref={register}></input>
                 <label htmlFor='password'>Pasword:</label>
-                <input name='password' type='text' required ref={register}></input>
+                <input name='password' type='password' required ref={register}></input>
                 <button type='submit'>Submit</button>
             </form>
         </div>

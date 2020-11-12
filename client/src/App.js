@@ -6,6 +6,7 @@ import Landing from './components/layout/Landing';
 import Register from './components/Register';
 import Login from './components/Login';
 import Logout from './components/Logout';
+import OrderForm from './components/order/OrderForm';
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/logout' component={Logout} />
+            <Route exact path='/orderform' component={OrderForm} />
           </Switch>
         </Fragment>
       </UserContext.Provider>

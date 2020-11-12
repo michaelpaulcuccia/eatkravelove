@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,11 +10,14 @@ export const Navie = props => {
             <Navbar.Brand href="/"><h1>EatKraveLove</h1></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav style={{ marginLeft: '1000px' }}>
+                <Nav style={{ marginLeft: '865px' }}>
                     <Link style={{ marginRight: '15px' }} to='/register'><h4>Register</h4></Link>
                     <Link style={{ marginRight: '15px' }} to='/login'><h4>Login</h4></Link>
                     {props.showLogOut &&
-                        <Link to='/logout'><h4>Logout</h4></Link>
+                        <Fragment>
+                            <Link style={{ marginRight: '15px' }} to='/logout'><h4>Logout</h4></Link>
+                            <Link to='/orderform'><h4>Order</h4></Link>
+                        </Fragment>
                     }
                 </Nav>
             </Navbar.Collapse>
