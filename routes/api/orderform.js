@@ -44,30 +44,13 @@ router.post('/', auth, async (req, res) => {
         //save to DB
         await order.save();
 
-        res.json(order)
+        res.json(order);
 
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server Error');
     }
 
-
-
 })
 
 module.exports = router;
-
-/*
-{
-        "name": "test",
-        "phone": "555-555-5555",
-        "email": "test@mail.com",
-        "address": "100 Main Street",
-        "deliveryaddress": "100 Main Street",
-        "numberofguests": "5",
-        "deliverydateandtime": "2020-11-12T15:37",
-        "options": "",
-        "dietaryrestrictions": "",
-        "allergies": ""
-}
-*/

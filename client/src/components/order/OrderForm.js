@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 const OrderForm = () => {
 
@@ -7,6 +8,16 @@ const OrderForm = () => {
 
     const onSubmit = async data => {
         console.log(data);
+
+        try {
+
+            //need token in headers
+
+            //await axios.post('api/orderform')
+
+        } catch (err) {
+
+        }
 
         //clear form
         reset();
@@ -54,7 +65,7 @@ const OrderForm = () => {
                 </div>
 
                 <div>
-                    <label>Options:</label>
+                    <label>Options</label>
                     <input type="radio" name="veg" value="veg"></input>
                     <label htmlFor="veg">Vegetarian</label>
                     <input type="radio" name="nonveg" value="nonveg"></input>
