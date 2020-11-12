@@ -7,14 +7,14 @@ export const Navie = props => {
     return (
 
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/">EatKraveLove</Navbar.Brand>
+            <Navbar.Brand href="/"><h1>EatKraveLove</h1></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav style={{ marginLeft: '1000px' }}>
-                    <Link style={{ marginRight: '15px' }} to='/register'>Register</Link>
-                    <Link style={{ marginRight: '15px' }} to='/login'>Login</Link>
+                    <Link style={{ marginRight: '15px' }} to='/register'><h4>Register</h4></Link>
+                    <Link style={{ marginRight: '15px' }} to='/login'><h4>Login</h4></Link>
                     {props.showLogOut &&
-                        <Link to='/logout'>Logout</Link>
+                        <Link to='/logout'><h4>Logout</h4></Link>
                     }
                 </Nav>
             </Navbar.Collapse>
