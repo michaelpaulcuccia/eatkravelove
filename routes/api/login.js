@@ -6,7 +6,7 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 
 //LOGIN
-//ROUTE: api/login 
+//ROUTE: api/login
 router.post('/', async (req, res) => {
 
     //destructure request

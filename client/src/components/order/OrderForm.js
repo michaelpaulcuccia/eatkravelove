@@ -24,7 +24,7 @@ const OrderForm = () => {
 
                 <div>
                     <label htmlFor='phone'>Phone:</label>
-                    <input name='phone' type='tel' placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required ref={register}></input>
+                    <input name='phone' type='tel' placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required ref={register}></input>
                 </div>
 
                 <div>
@@ -54,7 +54,7 @@ const OrderForm = () => {
                 </div>
 
                 <div>
-                    <label>Options</label>
+                    <label>Options:</label>
                     <input type="radio" name="veg" value="veg"></input>
                     <label htmlFor="veg">Vegetarian</label>
                     <input type="radio" name="nonveg" value="nonveg"></input>
@@ -66,13 +66,13 @@ const OrderForm = () => {
                 <div>
                     <label htmlFor='dietaryrestrictions'>Dietary Restrictions:</label>
                     <br></br>
-                    <textarea name='dietaryrestrictions' defaultValue='Enter dietary restrictions...' rows="4" cols="50" maxLength="300" ref={register}></textarea>
+                    <textarea name='dietaryrestrictions' rows="4" cols="50" maxLength="300" ref={register}></textarea>
                 </div>
 
                 <div>
                     <label htmlFor='allergies'>Allergies:</label>
                     <br></br>
-                    <textarea name='allergies' defaultValue='Enter allergies...' rows="4" cols="50" maxLength="300" ref={register}></textarea>
+                    <textarea name='allergies' rows="4" cols="50" maxLength="300" ref={register}></textarea>
                 </div>
 
                 <div>
