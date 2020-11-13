@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import UserContext from './context/UserContext';
 import Navie from './components/layout/Navie';
@@ -13,6 +13,15 @@ const App = () => {
 
   const [token, setToken] = useState('');
   const [showTabs, setShowTabs] = useState(false);
+
+  useEffect(() => {
+    const webToken = localStorage.getItem('x-auth-token');
+    console.log(webToken)
+    if (webToken) {
+      setShowTabs(true)
+      setToken(webToken)
+    }
+  }, [])
 
   return (
 
