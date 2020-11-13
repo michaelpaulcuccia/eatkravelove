@@ -4,7 +4,7 @@ import UserContext from '../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 
-const Login = () => {
+const Login = props => {
 
     const { register, handleSubmit, reset } = useForm();
     const { setToken } = useContext(UserContext);
@@ -17,8 +17,7 @@ const Login = () => {
             //create headers
             const config = {
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Set-Cookie': 'ice_cream=chocolate'
+                    'Content-Type': 'application/json'
                 }
             };
 
@@ -28,10 +27,17 @@ const Login = () => {
             //make request
             const req = await axios.post('api/login', body, config);
 
+            //add token to context
             setToken(req.data.token);
+
+            //set token to local storage
+            localStorage.setItem("x-auth-token", req.data.token);
 
             //clear form
             reset();
+
+            //show tabs
+            props.setShowTabs(true)
 
             //redirect
             history.push('/');

@@ -2,16 +2,21 @@ import React, { useContext } from 'react';
 import UserContext from '../context/UserContext';
 import { useHistory } from 'react-router-dom';
 
-const Logout = () => {
+const Logout = props => {
 
     const { setToken } = useContext(UserContext);
     const history = useHistory();
 
     const handleLogOut = async () => {
+
+        //remove token from local storage
         localStorage.removeItem("x-auth-token");
 
         //set Context to undefined - removes 'Logout' in Nav
         setToken(undefined);
+
+        //unshow tabs
+        props.setShowTabs(false)
 
         //redirect
         history.push('/');

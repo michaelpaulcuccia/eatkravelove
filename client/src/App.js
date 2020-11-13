@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import UserContext from './context/UserContext';
 import Navie from './components/layout/Navie';
@@ -12,35 +12,29 @@ import OrderForm from './components/order/OrderForm';
 const App = () => {
 
   const [token, setToken] = useState('');
-  const [showLogOut, setShowLogOut] = useState(false);
-
-  const setTokenLocalStorage = async () => {
-
-    localStorage.setItem("x-auth-token", token);
-
-    if (token !== '') {
-      setShowLogOut(!showLogOut)
-    } else {
-      setShowLogOut(showLogOut)
-    }
-
-  };
-
-  useEffect(() => {
-    setTokenLocalStorage()
-  }, [token]);
+  const [showTabs, setShowTabs] = useState(false);
 
   return (
 
     <Router>
       <UserContext.Provider value={{ token, setToken }}>
         <Fragment>
-          <Navie showLogOut={showLogOut} />
+          <Navie showTabs={showTabs} />
           <Route exact path='/' component={Landing} />
           <Switch>
             <Route exact path='/register' component={Register} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/logout' component={Logout} />
+            <Route
+              path='/login'
+              render={(props) => (
+                <Login {...props} setShowTabs={setShowTabs} />
+              )}
+            />
+            <Route
+              path='/logout'
+              render={(props) => (
+                <Logout {...props} setShowTabs={setShowTabs} />
+              )}
+            />
             <Route exact path='/orderform' component={OrderForm} />
           </Switch>
         </Fragment>
@@ -51,4 +45,3 @@ const App = () => {
 }
 
 export default App
-
