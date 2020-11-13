@@ -17,7 +17,8 @@ const Login = () => {
             //create headers
             const config = {
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Set-Cookie': 'ice_cream=chocolate'
                 }
             };
 
