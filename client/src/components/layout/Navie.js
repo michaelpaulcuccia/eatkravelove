@@ -15,8 +15,8 @@ export const Navie = props => {
                     <Link style={{ marginRight: '15px' }} to='/login'><h4>Login</h4></Link>
                     {props.showTabs &&
                         <Fragment>
-                            <Link style={{ marginRight: '15px' }} to='/logout'><h4>Logout</h4></Link>
-                            <Link to='/orderform'><h4>Order</h4></Link>
+                            <Link style={{ marginRight: '15px' }} to='/orderform'><h4>Order</h4></Link>
+                            <Link to='/logout'><h4>Logout</h4></Link>
                         </Fragment>
                     }
                 </Nav>
