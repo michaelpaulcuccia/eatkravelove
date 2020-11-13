@@ -7,7 +7,7 @@ export const Navie = props => {
     return (
 
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/"><h1>EatKraveLove</h1></Navbar.Brand>
+            <Navbar.Brand><Link to='/'><h1>EatKraveLove</h1></Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav style={{ marginLeft: '865px' }}>
