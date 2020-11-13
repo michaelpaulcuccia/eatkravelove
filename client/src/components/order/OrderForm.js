@@ -1,22 +1,51 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import UserContext from '../../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 
 const OrderForm = () => {
 
+    const { token } = useContext(UserContext);
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = async data => {
         console.log(data);
 
+        //create object
+        const order = {
+            name: data.name,
+            phone: data.phone,
+            email: data.email,
+            address: data.address,
+            deliveryaddress: data.deliveryaddress,
+            numberofguests: data.numberofguests,
+            deliverydateandtime: data.deliverydateandtime,
+            options: data.options,
+            dietaryrestrictions: data.dietaryrestrictions,
+            allergies: data.allergies
+        }
+
         try {
 
-            //need token in headers
+            //create headers with token
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': token
+                }
+            };
 
-            //await axios.post('api/orderform')
+            //create body
+            const body = JSON.stringify(order);
+
+            //make request
+            let req = await axios.post('api/orderform', body, config);
+
+            //Response in console
+            console.log(req)
 
         } catch (err) {
-
+            console.log(err.response.data)
         }
 
         //clear form
