@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const Navie = props => {
     return (
 
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="white" expand="lg">
             <Navbar.Brand><Link to='/'><h1>EatKraveLove</h1></Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
