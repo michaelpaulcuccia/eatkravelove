@@ -17,7 +17,6 @@ const App = () => {
 
   useEffect(() => {
     const webToken = localStorage.getItem('x-auth-token');
-    console.log(webToken)
     if (webToken) {
       setShowTabs(true)
       setToken(webToken)

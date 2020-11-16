@@ -10,7 +10,6 @@ const Register = () => {
     const history = useHistory();
 
     const onSubmit = async data => {
-        console.log(data)
 
         try {
 
