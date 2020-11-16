@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import '../style/LoginStyle.css';
 
 const Login = props => {
 
@@ -43,19 +44,54 @@ const Login = props => {
             history.push('/');
 
         } catch (err) {
-            console.log(err.response.data);
+
+            console.log(err.response);
+
+            //alert
+            window.alert('Log In Failed. Not registered or invalid credentials')
         }
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor='email'>Email:</label>
-                <input name='email' type='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required ref={register}></input>
-                <label htmlFor='password'>Pasword:</label>
-                <input name='password' type='password' required ref={register}></input>
-                <button type='submit'>Submit</button>
-            </form>
+            <div className='login_main_container'>
+
+                <h2 className="login_head"><i className="fas fa-user"></i> Log In To Your Account</h2>
+
+                <form className="form"
+                    action="create-profile.html"
+                    onSubmit={handleSubmit(onSubmit)}
+                >
+
+                    <div className="form-group">
+                        <input type="email"
+                            placeholder="Email Address"
+                            name="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            required
+                            ref={register}
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                            required
+                            ref={register}
+                        />
+                    </div>
+
+                    <input type="submit" className="login_button" value="Login" />
+                </form>
+
+                <p className="register_link">
+                    Don't have an account? <Link to='/register' className='text_link'>Sign Up</Link>
+                </p>
+
+            </div>
+
         </div>
     )
 }

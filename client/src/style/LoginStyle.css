@@ -1,0 +1,26 @@
+.login_main_container {
+    margin-top: 55px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.form {
+    margin-left: 15%;
+}
+
+.login_head {
+    color: black;
+}
+
+.login_button {
+    background-color: blue;
+    color: white;
+}
+
+.register_link {
+    margin-left: 15%;  
+}
+
+.text_link {
+    color: blue;
+}
