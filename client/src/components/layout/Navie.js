@@ -1,23 +1,26 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../style/NavieStyle.css'
 
 export const Navie = props => {
+
     return (
 
         <Navbar bg="white" expand="lg">
-            <Navbar.Brand><Link to='/'><h1>EatKraveLove</h1></Link></Navbar.Brand>
+            <Navbar.Brand><Link to='/'><p className='main_name'>EatKraveLove <p className="little_name">by Chef Sank</p></p></Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav style={{ marginLeft: '865px' }}>
-                    <Link style={{ marginRight: '15px' }} to='/register'><h4>Register</h4></Link>
-                    <Link style={{ marginRight: '15px' }} to='/login'><h4>Login</h4></Link>
+                    <Nav.Link><Link style={{ marginRight: '15px', fontSize: '1.5rem' }} to='/register'><p>Register</p></Link></Nav.Link>
+                    <Nav.Link><Link style={{ marginRight: '15px', fontSize: '1.5rem' }} to='/login'><p>Login</p></Link></Nav.Link>
                     {props.showTabs &&
-                        <Fragment>
-                            <Link style={{ marginRight: '15px' }} to='/orderform'><h4>Order</h4></Link>
-                            <Link to='/logout'><h4>Logout</h4></Link>
-                        </Fragment>
+                        <NavDropdown style={{ fontSize: '1.5rem', color: 'blue' }} title="User Options" id="basic-nav-dropdown">
+                            <NavDropdown.Item><Link style={{ fontSize: '1.5rem' }} to='/orderform'><p>Order</p></Link></NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item><Link style={{ fontSize: '1.5rem' }} to='/logout'><p>Logout</p></Link></NavDropdown.Item>
+                        </NavDropdown>
                     }
                 </Nav>
             </Navbar.Collapse>
