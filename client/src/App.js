@@ -7,6 +7,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Logout from './components/Logout';
 import OrderForm from './components/order/OrderForm';
+import Testimonials from './components/Testimonials';
 
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
               )}
             />
             <Route exact path='/orderform' component={OrderForm} />
+            <Route exact path='/testimonials' component={Testimonials} />
           </Switch>
         </Fragment>
       </UserContext.Provider>
