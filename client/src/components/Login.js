@@ -38,7 +38,8 @@ const Login = props => {
             reset();
 
             //show tabs
-            props.setShowTabs(true)
+            props.setShowTabs(true);
+            props.setHideRegisterLogin(false);
 
             //redirect
             history.push('/');

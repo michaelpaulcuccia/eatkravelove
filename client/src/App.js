@@ -14,12 +14,14 @@ const App = () => {
 
   const [token, setToken] = useState('');
   const [showTabs, setShowTabs] = useState(false);
+  const [hideRegisterLogin, setHideRegisterLogin] = useState(true);
 
   useEffect(() => {
     const webToken = localStorage.getItem('x-auth-token');
     if (webToken) {
-      setShowTabs(true)
-      setToken(webToken)
+      setShowTabs(true);
+      setHideRegisterLogin(false);
+      setToken(webToken);
     }
   }, [])
 
@@ -28,20 +30,20 @@ const App = () => {
     <Router>
       <UserContext.Provider value={{ token, setToken }}>
         <Fragment>
-          <Navie showTabs={showTabs} />
+          <Navie showTabs={showTabs} hideRegisterLogin={hideRegisterLogin} />
           <Route exact path='/' component={Landing} />
           <Switch>
             <Route exact path='/register' component={Register} />
             <Route
               path='/login'
               render={(props) => (
-                <Login {...props} setShowTabs={setShowTabs} />
+                <Login {...props} setShowTabs={setShowTabs} setHideRegisterLogin={setHideRegisterLogin} />
               )}
             />
             <Route
               path='/logout'
               render={(props) => (
-                <Logout {...props} setShowTabs={setShowTabs} />
+                <Logout {...props} setShowTabs={setShowTabs} setHideRegisterLogin={setHideRegisterLogin} />
               )}
             />
             <Route exact path='/orderform' component={OrderForm} />

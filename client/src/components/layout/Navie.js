@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,8 +13,12 @@ export const Navie = props => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav style={{ marginLeft: '865px' }}>
-                    <Nav.Link><Link style={{ marginRight: '15px', fontSize: '1.5rem' }} to='/register'><p>Register</p></Link></Nav.Link>
-                    <Nav.Link><Link style={{ marginRight: '15px', fontSize: '1.5rem' }} to='/login'><p>Login</p></Link></Nav.Link>
+                    {props.hideRegisterLogin &&
+                        <Fragment>
+                            <Nav.Link as={Link} to='/register' style={{ marginRight: '15px', fontSize: '1.5rem' }}><p>Register</p></Nav.Link>
+                            <Nav.Link as={Link} to='/login' style={{ marginRight: '15px', fontSize: '1.5rem' }}><p>Login</p></Nav.Link>
+                        </Fragment>
+                    }
                     {props.showTabs &&
                         <NavDropdown style={{ fontSize: '1.5rem', color: 'blue' }} title="User Options" id="basic-nav-dropdown">
                             <NavDropdown.Item><Link style={{ fontSize: '1.5rem' }} to='/orderform'><p>Order</p></Link></NavDropdown.Item>

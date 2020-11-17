@@ -17,6 +17,7 @@ const Logout = props => {
 
         //unshow tabs
         props.setShowTabs(false)
+        props.setHideRegisterLogin(true);
 
         //redirect
         history.push('/');
