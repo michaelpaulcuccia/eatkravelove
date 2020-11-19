@@ -14,8 +14,6 @@ router.post('/', async (req, res) => {
 
     try {
 
-        let admin;
-
         //check for email and password
         if (!email || !password) {
             return res.status(401).json({ errors: [{ msg: 'Must provide email and password' }] });
@@ -23,13 +21,6 @@ router.post('/', async (req, res) => {
 
         //find user
         const user = await User.findOne({ email });
-
-        //check for admin
-        if (user.name === 'ekl_admin' && user.email === 'ekl_admin@mail.com') {
-            admin = true;
-        }
-
-        console.log(admin)
 
         //check for user
         if (!user) {
@@ -56,12 +47,8 @@ router.post('/', async (req, res) => {
             if (err) {
                 throw err
             } else {
-                if (admin) {
-                    res.json({ token, admin })
-                } else {
-                    //send token to client in res
-                    res.json({ token });
-                }
+                //send token to client in res
+                res.json({ token });
             }
         });
 
