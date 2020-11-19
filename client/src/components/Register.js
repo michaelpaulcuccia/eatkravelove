@@ -26,8 +26,6 @@ const Register = () => {
             //make request
             const req = await axios.post('api/register', body, config);
 
-            console.log(req)
-
             //set token to state
             setToken(req.data.token)
 

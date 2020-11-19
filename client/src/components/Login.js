@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../context/UserContext';
+import AdminContext from '../context/AdminContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import '../style/LoginStyle.css';
@@ -9,6 +10,7 @@ const Login = props => {
 
     const { register, handleSubmit, reset } = useForm();
     const { setToken } = useContext(UserContext);
+    const { setAdmn } = useContext(AdminContext);
     const history = useHistory();
 
     const onSubmit = async data => {
@@ -30,6 +32,13 @@ const Login = props => {
 
             //add token to context
             setToken(req.data.token);
+
+            if (req.data.admin) {
+                console.log('admin')
+                setAdmn(true);
+            } else {
+                console.log('regular user')
+            }
 
             //set token to local storage
             localStorage.setItem("x-auth-token", req.data.token);
