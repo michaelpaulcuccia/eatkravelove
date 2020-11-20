@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import UserContext from '../context/UserContext';
+import AdminContext from '../context/AdminContext';
 import { useHistory } from 'react-router-dom';
 
 const Logout = props => {
 
     const { setToken } = useContext(UserContext);
+    const { setAdmin } = useContext(AdminContext)
     const history = useHistory();
 
     const handleLogOut = async () => {
@@ -14,10 +16,12 @@ const Logout = props => {
 
         //set Context to undefined - removes 'Logout' in Nav
         setToken(undefined);
+        setAdmin(undefined);
 
         //unshow tabs
         props.setShowTabs(false)
         props.setHideRegisterLogin(true);
+        props.setShowAdmin(false)
 
         //redirect
         history.push('/');
