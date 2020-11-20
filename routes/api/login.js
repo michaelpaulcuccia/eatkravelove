@@ -29,11 +29,9 @@ router.post('/', admin, async (req, res) => {
         }
 
         //check for admin 
+        let administrator;
         if (admin) {
-            console.log('admin present');
-            console.log(admin);
-        } else {
-            console.log('admin not present');
+            administrator = true;
         }
 
         //make sure password matches - password is from req.body, user.password is encrypted password from db
@@ -56,8 +54,8 @@ router.post('/', admin, async (req, res) => {
             if (err) {
                 throw err
             } else {
-                //send token to client in res
-                res.json({ token });
+                //send token to client in res with administrator - true, undefined
+                res.json({ token, administrator });
             }
         });
 

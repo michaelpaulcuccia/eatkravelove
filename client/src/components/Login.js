@@ -28,6 +28,9 @@ const Login = props => {
             //make request
             const req = await axios.post('api/login', body, config);
 
+            //TO DO - Assign Admin
+            console.log(req.data.administrator) //true, undefined
+
             //add token to context
             setToken(req.data.token);
 
