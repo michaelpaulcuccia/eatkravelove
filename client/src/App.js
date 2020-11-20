@@ -9,7 +9,7 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import OrderForm from './components/order/OrderForm';
 import Testimonials from './components/Testimonials';
-import Admin from './components/admin/Admin';
+import Administrator from './components/admin/Administrator';
 
 
 const App = () => {
@@ -61,7 +61,7 @@ const App = () => {
               <Route exact path='/orderform' component={OrderForm} />
               <Route exact path='/testimonials' component={Testimonials} />
               {admin &&
-                <Route exact path='/admin' component={Admin} />
+                <Route exact path='/admin' component={Administrator} />
               }
             </Switch>
           </Fragment>
