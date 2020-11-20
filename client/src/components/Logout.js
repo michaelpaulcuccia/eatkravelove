@@ -14,12 +14,12 @@ const Logout = props => {
         //remove token from local storage
         localStorage.removeItem("x-auth-token");
 
-        //set Context to undefined - removes 'Logout' in Nav
+        //Context API
         setToken(undefined);
         setAdmin(undefined);
 
-        //unshow tabs
-        props.setShowTabs(false)
+        //hide tabs - restores to initial values
+        props.setShowHiddenTabs(false)
         props.setHideRegisterLogin(true);
         props.setShowAdmin(false)
 

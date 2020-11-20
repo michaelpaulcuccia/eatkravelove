@@ -19,7 +19,7 @@ export const Navie = props => {
                             <Nav.Link as={Link} to='/login' style={{ marginRight: '15px', fontSize: '1.5rem' }}>Login</Nav.Link>
                         </Fragment>
                     }
-                    {props.showTabs &&
+                    {props.showHiddenTabs &&
                         <NavDropdown style={{ fontSize: '1.5rem', color: 'blue' }} title="User Options" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to='/orderform' style={{ fontSize: '1.5rem' }}>Order</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='/testimonials' style={{ fontSize: '1.5rem' }}>Testimonials</NavDropdown.Item>

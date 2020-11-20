@@ -19,14 +19,14 @@ const App = () => {
   const [admin, setAdmin] = useState(undefined);
 
   //tabs
-  const [showTabs, setShowTabs] = useState(false);
+  const [showHiddenTabs, setShowHiddenTabs] = useState(false);
   const [hideRegisterLogin, setHideRegisterLogin] = useState(true);
   const [showAdmin, setShowAdmin] = useState(false);
 
   useEffect(() => {
     const webToken = localStorage.getItem('x-auth-token');
     if (webToken) {
-      setShowTabs(true);
+      setShowHiddenTabs(true);
       setHideRegisterLogin(false);
       setToken(webToken);
     }
@@ -42,20 +42,20 @@ const App = () => {
       <AdminContext.Provider value={{ admin, setAdmin }}>
         <UserContext.Provider value={{ token, setToken }}>
           <Fragment>
-            <Navie showTabs={showTabs} hideRegisterLogin={hideRegisterLogin} admin={admin} />
+            <Navie showHiddenTabs={showHiddenTabs} hideRegisterLogin={hideRegisterLogin} admin={admin} />
             <Route exact path='/' component={Landing} />
             <Switch>
               <Route exact path='/register' component={Register} />
               <Route
                 path='/login'
                 render={(props) => (
-                  <Login {...props} setShowTabs={setShowTabs} setHideRegisterLogin={setHideRegisterLogin} />
+                  <Login {...props} setShowHiddenTabs={setShowHiddenTabs} setHideRegisterLogin={setHideRegisterLogin} />
                 )}
               />
               <Route
                 path='/logout'
                 render={(props) => (
-                  <Logout {...props} setShowTabs={setShowTabs} setHideRegisterLogin={setHideRegisterLogin} setShowAdmin={setShowAdmin} />
+                  <Logout {...props} setShowHiddenTabs={setShowHiddenTabs} setHideRegisterLogin={setHideRegisterLogin} setShowAdmin={setShowAdmin} />
                 )}
               />
               <Route exact path='/orderform' component={OrderForm} />
