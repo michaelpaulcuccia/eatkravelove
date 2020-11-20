@@ -4,13 +4,14 @@ const User = require('../../models/User');
 const bcrypt = require('bcrypt');
 const config = require('config');
 const jwt = require('jsonwebtoken');
+const admin = require('../../auth/admin');
 
 //LOGIN
 //ROUTE: api/login
-router.post('/', async (req, res) => {
+router.post('/', admin, async (req, res) => {
 
     //destructure request
-    const { email, password } = req.body;
+    const { email, password, admin } = req.body;
 
     try {
 
@@ -25,6 +26,14 @@ router.post('/', async (req, res) => {
         //check for user
         if (!user) {
             return res.status(401).json({ errors: [{ msg: 'User does not exists' }] })
+        }
+
+        //check for admin 
+        if (admin) {
+            console.log('admin present');
+            console.log(admin);
+        } else {
+            console.log('admin not present');
         }
 
         //make sure password matches - password is from req.body, user.password is encrypted password from db
