@@ -3,7 +3,7 @@ module.exports = function (req, res, next) {
     //deconstruct req
     const { email } = req.body;
 
-    if (email === 'ekl_admin@mail.com') {
+    if (email === 'michael@mail.com') {
         req.body.admin = 'admin_001';
     }
 

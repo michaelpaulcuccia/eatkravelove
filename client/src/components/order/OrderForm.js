@@ -10,7 +10,6 @@ const OrderForm = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = async data => {
-        console.log(data);
 
         //create object
         const order = {
