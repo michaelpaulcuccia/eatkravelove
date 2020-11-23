@@ -3,18 +3,21 @@ import AdminContext from '../../context/AdminContext';
 import { Admin, Resource } from 'react-admin';
 import restProvider from 'ra-data-simple-rest';
 import UsersList from './adminComponents/users/UsersList';
+import UsersEdit from './adminComponents/users/UsersEdit';
+import { createBrowserHistory as createHistory } from 'history';
 import '../../style/AdministratorStyle.css';
 
 const Administrator = () => {
 
     const { admin } = useContext(AdminContext);
+    const history = createHistory();
 
     return (
         <div>
             {admin && admin !== undefined ?
 
-                <Admin dataProvider={restProvider('http://localhost:3000')}>
-                    <Resource name='admin/users' list={UsersList} />
+                <Admin history={history} dataProvider={restProvider('http://localhost:3000')}>
+                    <Resource name='admin/users' list={UsersList} edit={UsersEdit} />
                 </Admin>
 
                 :

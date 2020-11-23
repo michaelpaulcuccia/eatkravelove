@@ -10,7 +10,7 @@ const Login = props => {
 
     const { register, handleSubmit, reset } = useForm();
     const { setToken } = useContext(UserContext);
-    const { admin, setAdmin } = useContext(AdminContext);
+    const { setAdmin } = useContext(AdminContext);
     const history = useHistory();
 
     const onSubmit = async data => {
