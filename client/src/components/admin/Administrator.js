@@ -5,15 +5,16 @@ import UsersList from './adminComponents/users/UsersList';
 import UsersEdit from './adminComponents/users/UsersEdit';
 import '../../style/AdministratorStyle.css';
 
-//import { createBrowserHistory as createHistory } from 'history';
+import { createBrowserHistory as createHistory } from 'history';
 
 const Administrator = () => {
 
-    //const history = createHistory();
+    const history = createHistory();
 
     return (
         <Admin
-            //history={history}
+
+            history={history}
             dataProvider={restProvider('http://localhost:3000')}>
             <Resource name='admin/users' list={UsersList} edit={UsersEdit} />
         </Admin>

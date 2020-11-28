@@ -53,6 +53,7 @@ const App = () => {
             />
             <Route exact path='/orderform' component={OrderForm} />
             <Route exact path='/testimonials' component={Testimonials} />
+            <Route exact path='/admin' component={Administrator} />
           </Switch>
         </Fragment>
       </UserContext.Provider>

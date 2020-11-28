@@ -23,6 +23,7 @@ export const Navie = props => {
                         <NavDropdown style={{ fontSize: '1.5rem', color: 'blue' }} title="User Options" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to='/orderform' style={{ fontSize: '1.5rem' }}>Order</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='/testimonials' style={{ fontSize: '1.5rem' }}>Testimonials</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to='/admin' style={{ fontSize: '1.5rem' }}>Admin</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item as={Link} to='/logout' style={{ fontSize: '1.5rem' }}>Logout</NavDropdown.Item>
                         </NavDropdown>
