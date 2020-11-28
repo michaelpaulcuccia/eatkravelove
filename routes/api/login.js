@@ -4,14 +4,13 @@ const User = require('../../models/User');
 const bcrypt = require('bcrypt');
 const config = require('config');
 const jwt = require('jsonwebtoken');
-const admin = require('../../auth/admin');
 
 //LOGIN
 //ROUTE: api/login
-router.post('/', admin, async (req, res) => {
+router.post('/', async (req, res) => {
 
     //destructure request
-    const { email, password, admin } = req.body;
+    const { email, password } = req.body;
 
     try {
 
@@ -28,11 +27,6 @@ router.post('/', admin, async (req, res) => {
             return res.status(401).json({ errors: [{ msg: 'User does not exists' }] })
         }
 
-        //check for admin 
-        let administrator;
-        if (admin) {
-            administrator = true;
-        }
 
         //make sure password matches - password is from req.body, user.password is encrypted password from db
         const isMatch = await bcrypt.compare(password, user.password);
@@ -54,8 +48,8 @@ router.post('/', admin, async (req, res) => {
             if (err) {
                 throw err
             } else {
-                //send token to client in res with administrator - true, undefined
-                res.json({ token, administrator });
+                //send token to client in res 
+                res.json({ token });
             }
         });
 

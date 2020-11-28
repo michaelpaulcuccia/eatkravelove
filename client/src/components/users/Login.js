@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
-import AdminContext from '../../context/AdminContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import '../../style/LoginStyle.css';
@@ -10,7 +9,6 @@ const Login = props => {
 
     const { register, handleSubmit, reset } = useForm();
     const { setToken } = useContext(UserContext);
-    const { setAdmin } = useContext(AdminContext);
     const history = useHistory();
 
     const onSubmit = async data => {
@@ -29,9 +27,6 @@ const Login = props => {
 
             //make request
             const req = await axios.post('api/login', body, config);
-
-            //Assign Admin
-            setAdmin(req.data.administrator);
 
             //add token to context
             setToken(req.data.token);

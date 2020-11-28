@@ -27,9 +27,6 @@ export const Navie = props => {
                             <NavDropdown.Item as={Link} to='/logout' style={{ fontSize: '1.5rem' }}>Logout</NavDropdown.Item>
                         </NavDropdown>
                     }
-                    {props.admin &&
-                        <Nav.Link as={Link} to='/admin' style={{ marginRight: '15px', fontSize: '1.5rem' }}>Admin</Nav.Link>
-                    }
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
 import UserContext from '../../context/UserContext';
-import AdminContext from '../../context/AdminContext';
 import { useHistory } from 'react-router-dom';
 
 const Logout = props => {
 
     const { setToken } = useContext(UserContext);
-    const { setAdmin } = useContext(AdminContext)
     const history = useHistory();
 
     const handleLogOut = async () => {
@@ -16,12 +14,10 @@ const Logout = props => {
 
         //Context API
         setToken(undefined);
-        setAdmin(undefined);
 
         //hide tabs - restores to initial values
         props.setShowHiddenTabs(false)
         props.setHideRegisterLogin(true);
-        props.setShowAdmin(false)
 
         //redirect
         history.push('/');
