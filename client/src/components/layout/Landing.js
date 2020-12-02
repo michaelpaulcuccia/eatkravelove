@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Carousel } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import chef_sank from '../../images/chef_sank.jpg';
 import pic_two from '../../images/pic_two.jpg';
 import pic_three from '../../images/pic_three.jpg';
-import landing_quote from '../../images/landing_quote.PNG';
 import '../../style/LandingStyle.css';
 
 const Landing = () => {

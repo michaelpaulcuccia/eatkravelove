@@ -10,7 +10,7 @@ export const Navie = props => {
 
         <div>
             <Navbar bg="white" expand="lg">
-                <Navbar.Brand><Link to='/'><p className='main_name'>EatKraveLove <small className="little_name">by Chef Sank</small></p></Link></Navbar.Brand>
+                <Navbar.Brand><Link to='/' style={{ textDecoration: 'none' }}><p className='main_name'>EatKraveLove <small className="little_name">by Chef Sank</small></p></Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav style={{ marginLeft: '800px' }}>
@@ -35,7 +35,7 @@ export const Navie = props => {
             <Navbar fixed="bottom">
                 <Navbar.Brand>
                     <i className='fab fa-instagram'></i>
-                    <a href='https://www.instagram.com/eatkravelove/?hl=en' target="_blank" rel="noreferrer"> Follow on Instagram</a>
+                    <a style={{ textDecoration: 'none' }} href='https://www.instagram.com/eatkravelove/?hl=en' target="_blank" rel="noreferrer"> Follow on Instagram</a>
                 </Navbar.Brand>
             </Navbar>
         </div>
