@@ -8,7 +8,6 @@ import Login from './components/users/Login';
 import Logout from './components/users/Logout';
 import OrderForm from './components/order/OrderForm';
 import Testimonials from './components/Testimonials';
-import Administrator from './components/admin/Administrator';
 
 
 const App = () => {
@@ -53,7 +52,6 @@ const App = () => {
             />
             <Route exact path='/orderform' component={OrderForm} />
             <Route exact path='/testimonials' component={Testimonials} />
-            <Route exact path='/admin' component={Administrator} />
           </Switch>
         </Fragment>
       </UserContext.Provider>
