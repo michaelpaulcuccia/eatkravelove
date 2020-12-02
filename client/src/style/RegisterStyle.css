@@ -1,0 +1,19 @@
+.register_main_container {
+    margin-top: 55px;
+    margin-left: 31%;
+    margin-right: 31%;
+}
+
+.form {
+    margin-left: 25%;
+}
+
+.register_head {
+    color: black;
+}
+
+.register_button {
+    background-color: green;
+    color: white;
+}
+

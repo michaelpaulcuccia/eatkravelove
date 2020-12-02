@@ -60,7 +60,6 @@ const Login = props => {
                 <h2 className="login_head"><i className="fas fa-user"></i> Log In To Your Account</h2>
 
                 <form className="form"
-                    action="create-profile.html"
                     onSubmit={handleSubmit(onSubmit)}
                 >
 
