@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import UserContext from '../../context/UserContext';
 import { useForm } from "react-hook-form";
+import { Form } from "react-bootstrap";
 import axios from 'axios';
 import '../../style/OrderFormStyle.css';
 
@@ -24,6 +25,8 @@ const OrderForm = () => {
             dietaryrestrictions: data.dietaryrestrictions,
             allergies: data.allergies
         }
+
+        console.log(order)
 
         try {
 
@@ -82,22 +85,37 @@ const OrderForm = () => {
                 </div>
 
                 <div>
-                    <label className='label_text' htmlFor='name'>Delivery Address:</label>
+                    <label className='label_text' htmlFor='deliveryaddress'>Delivery Address:</label>
                     <input className='input_field' name='deliveryaddress' type='text' required ref={register}></input>
-                    <div style={{ marginBottom: '13px' }}><small>Please add if different than home address.</small></div>
                 </div>
 
                 <div>
-                    <label className='label_text' htmlFor='name'>Number of Guests:</label>
+                    <label className='label_text' htmlFor='numberofguests'>Number of Guests:</label>
                     <input className='input_field' name='numberofguests' type='number' required ref={register}></input>
                 </div>
 
                 <div>
-                    <label className='label_text' htmlFor='name'>Delivery Date and Time:</label>
+                    <label className='label_text' htmlFor='deliverydateandtime'>Delivery Date and Time:</label>
                     <input className='input_field' name='deliverydateandtime' type='datetime-local' required ref={register}></input>
                 </div>
 
-                {/* //Radio Button and TextArea NOT WORKING - see react-hook-form docs */}
+                <div>
+                    <label className='label_text' style={{ marginRight: '6px' }}>Meat or Meatless Options</label>
+                    <select name="options" ref={register}>
+                        <option disabled value> -- select an option -- </option>
+                        <option value="veg">Vegetarian</option>
+                        <option value="nonveg">Non-Vegetarian</option>
+                        <option value="mix">Mix</option>
+                    </select>
+                </div>
+
+                <div style={{ textAlign: 'center', marginBottom: '7px' }}><small>All of the above fields are required.</small></div>
+
+                <Form.Group controlId="exampleForm.ControlTextarea1">
+                    <Form.Label className='label_text'>Special Requests, Dietary Restrictions, Allergies, Etc.</Form.Label>
+                    <Form.Control as="textarea" rows={3} name='dietaryrestrictions' ref={register} />
+                </Form.Group>
+
 
 
                 < input type="submit" value="Submit" />
