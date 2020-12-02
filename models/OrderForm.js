@@ -38,10 +38,7 @@ const OrderFormSchema = new mongoose.Schema({
     options: {
         type: String,
     },
-    dietaryrestrictions: {
-        type: String
-    },
-    allergies: {
+    specialrequests: {
         type: String
     }
 });

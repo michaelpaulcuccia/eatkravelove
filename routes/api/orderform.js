@@ -15,8 +15,7 @@ router.post('/', auth, async (req, res) => {
         numberofguests,
         deliverydateandtime,
         options,
-        dietaryrestrictions,
-        allergies
+        specialrequests
     } = req.body;
 
     //id from user collection
@@ -33,8 +32,7 @@ router.post('/', auth, async (req, res) => {
         numberofguests: numberofguests,
         deliverydateandtime: deliverydateandtime,
         options: options,
-        dietaryrestrictions: dietaryrestrictions,
-        allergies: allergies
+        specialrequests: specialrequests
     };
 
     //create instance of orderForm class with orderObj

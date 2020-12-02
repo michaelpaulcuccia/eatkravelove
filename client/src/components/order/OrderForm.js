@@ -22,8 +22,7 @@ const OrderForm = () => {
             numberofguests: data.numberofguests,
             deliverydateandtime: data.deliverydateandtime,
             options: data.options,
-            dietaryrestrictions: data.dietaryrestrictions,
-            allergies: data.allergies
+            specialrequests: data.specialrequests
         }
 
         console.log(order)
@@ -113,7 +112,7 @@ const OrderForm = () => {
 
                 <Form.Group controlId="exampleForm.ControlTextarea1">
                     <Form.Label className='label_text'>Special Requests, Dietary Restrictions, Allergies, Etc.</Form.Label>
-                    <Form.Control as="textarea" rows={3} name='dietaryrestrictions' ref={register} />
+                    <Form.Control as="textarea" rows={3} name='specialrequests' ref={register} />
                 </Form.Group>
 
 
