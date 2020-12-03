@@ -4,6 +4,27 @@
     font-size: 2.5rem;
 }
 
+.right_navlinks {
+    margin-left: 75%;
+}
+
 .little_name {
     font-size: 1rem;
+}
+
+.home_link {
+    text-decoration: none;
+}
+
+.footer_anchortag {
+    text-decoration: none;
+}
+
+.little_linkies {
+    font-size: 1.75rem;
+}
+
+.useroptions_dropdown {
+    font-size: 1.75rem;
+    color: blue;
 }

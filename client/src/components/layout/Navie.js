@@ -10,22 +10,36 @@ export const Navie = props => {
 
         <div>
             <Navbar bg="white" expand="lg">
-                <Navbar.Brand><Link to='/' style={{ textDecoration: 'none' }}><p className='main_name'>EatKraveLove <small className="little_name">by Chef Sank</small></p></Link></Navbar.Brand>
+                <Navbar.Brand>
+                    <Link to='/' className='home_link'>
+                        <p className='main_name'>EatKraveLove <small className="little_name">by Chef Sank</small></p>
+                    </Link>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav style={{ marginLeft: '800px' }}>
+                    <Nav className='right_navlinks' >
                         {props.hideRegisterLogin &&
                             <Fragment>
-                                <Nav.Link as={Link} to='/register' style={{ marginRight: '15px', fontSize: '1.5rem' }}>Register</Nav.Link>
-                                <Nav.Link as={Link} to='/login' style={{ marginRight: '15px', fontSize: '1.5rem' }}>Login</Nav.Link>
+                                <Nav.Link as={Link} to='/register'
+                                    className='little_linkies'
+                                >Register</Nav.Link>
+                                <Nav.Link as={Link} to='/login'
+                                    className='little_linkies'
+                                >Login</Nav.Link>
                             </Fragment>
                         }
                         {props.showHiddenTabs &&
-                            <NavDropdown style={{ fontSize: '1.5rem', color: 'blue' }} title="User Options" id="basic-nav-dropdown">
-                                <NavDropdown.Item as={Link} to='/orderform' style={{ fontSize: '1.5rem' }}>Order</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to='/testimonials' style={{ fontSize: '1.5rem' }}>Testimonials</NavDropdown.Item>
+                            <NavDropdown className='useroptions_dropdown' title="User Options" id="basic-nav-dropdown">
+                                <NavDropdown.Item as={Link} to='/orderform' className='little_linkies' >
+                                    Order
+                                </NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to='/testimonials' className='little_linkies' >
+                                    Testimonials
+                                </NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item as={Link} to='/logout' style={{ fontSize: '1.5rem' }}>Logout</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to='/logout' className='little_linkies' >
+                                    Logout
+                                    </NavDropdown.Item>
                             </NavDropdown>
                         }
                     </Nav>
@@ -35,7 +49,7 @@ export const Navie = props => {
             <Navbar fixed="bottom">
                 <Navbar.Brand>
                     <i className='fab fa-instagram'></i>
-                    <a style={{ textDecoration: 'none' }} href='https://www.instagram.com/eatkravelove/?hl=en' target="_blank" rel="noreferrer"> Follow on Instagram</a>
+                    <a className='footer_anchortag' href='https://www.instagram.com/eatkravelove/?hl=en' target="_blank" rel="noreferrer"> Follow on Instagram</a>
                 </Navbar.Brand>
             </Navbar>
         </div>
