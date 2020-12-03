@@ -24,10 +24,10 @@
 */
 
 /* Mobile */
-/*
+
 @media(max-width: 500px){
     .container {
-     
+     max-width: 475px;
+     margin: 0 auto;
     }
 }
-*/
