@@ -18,9 +18,8 @@
     margin: auto;
 }
 
-
   /*Tablets */
-  /* @media(max-width: 768px){
+   @media(max-width: 768px){
     .landing_quote {
       width: 161.50px;
       height: 89.75px;
@@ -33,10 +32,10 @@
       margin: auto;
     }
   
-  } */
+  } 
   
   /* Mobile */
-  /* @media(max-width: 500px){
+   @media(max-width: 500px){
     .landing_quote {
       width: 124.25px;
       height: 69px;
@@ -48,4 +47,4 @@
         height: 96.50px;
         margin: auto;
       }
-} */
+} 

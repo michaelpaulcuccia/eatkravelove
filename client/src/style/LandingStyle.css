@@ -8,3 +8,23 @@
     max-width: 1100px;
     margin: 0 auto;
 }
+
+/*Tablets */
+@media(max-width: 768px){
+    .container {
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+    }
+}
+
+/* Mobile */
+@media(max-width: 500px){
+    .container {
+      max-width: 425px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+    }
+}
