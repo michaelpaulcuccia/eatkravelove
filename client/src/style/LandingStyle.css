@@ -9,22 +9,25 @@
     margin: 0 auto;
 }
 
-/*Tablets */
-@media(max-width: 768px){
-    .container {
-      max-width: 700px;
-      margin: auto;
-      display: flex;
-      flex-direction: row;
-    }
+.row_container {
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
-/* Mobile */
-@media(max-width: 500px){
+/*Tablets */
+/*
+@media(max-width: 768px){
     .container {
-      max-width: 425px;
-      margin: auto;
-      display: flex;
-      flex-direction: row;
+    
     }
 }
+*/
+
+/* Mobile */
+/*
+@media(max-width: 500px){
+    .container {
+     
+    }
+}
+*/

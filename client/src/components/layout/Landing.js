@@ -3,25 +3,32 @@ import { Col, Row, Navbar } from "react-bootstrap";
 import Caro from './landingComponents/Caro';
 import LandingQuote from './landingComponents/LandingQuote';
 import LandingQuoteTwo from './landingComponents/LandingQuoteTwo';
+import '../../style/LandingStyle.css';
 
 const Landing = () => {
 
 
     return (
         <div className='container'>
-            <Row>
 
-                <Col sm={2}>
-                    <LandingQuote />
-                </Col>
+            <Row className='row_container'>
+                <div>
+                    <Col sm={2}>
+                        <LandingQuote />
+                    </Col>
+                </div>
 
-                <Col sm={7}>
-                    <Caro />
-                </Col>
+                <div>
+                    <Col sm={6}>
+                        <Caro />
+                    </Col>
+                </div>
 
-                <Col sm={3}>
-                    <LandingQuoteTwo />
-                </Col>
+                <div>
+                    <Col sm={4}>
+                        <LandingQuoteTwo />
+                    </Col>
+                </div>
 
             </Row>
 

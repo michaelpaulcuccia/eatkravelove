@@ -3,7 +3,7 @@
     font-style: oblique;
     font-weight: bold;
     font-size: 1.5em;
-    width: 248.50px;
+    width: 137.5px;
     height: 138px;
     margin: auto;
 }
@@ -13,38 +13,31 @@
     font-style: normal;
     font-weight: 600;
     font-size: 1.1em;
-    width: 348px;
-    height: 193.25px;
+    width: 275px;
+    height: 138px;
     margin: auto;
 }
 
+
   /*Tablets */
-   @media(max-width: 768px){
+  /* @media(max-width: 768px){
     .landing_quote {
-      width: 161.50px;
-      height: 89.75px;
-      margin: auto;
+      
     }
 
     .landing_quoteTwo {
-      width: 226.25px;
-      height: 125.50px;
-      margin: auto;
+    
     }
   
-  } 
+  } */
   
   /* Mobile */
-   @media(max-width: 500px){
+  /* @media(max-width: 500px){
     .landing_quote {
-      width: 124.25px;
-      height: 69px;
-      margin: auto;
+      
     }
 
     .landing_quoteTwo {
-        width: 174px;
-        height: 96.50px;
-        margin: auto;
+       
       }
-} 
+} */
