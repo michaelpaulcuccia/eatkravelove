@@ -1,10 +1,9 @@
 import React from 'react';
-import landing_quote from '../../../images/landing_quote.PNG';
 
 const LandingQuote = () => {
     return (
-        <div>
-            <img src={landing_quote} alt='landing_quote' />
+        <div style={{ fontFamily: 'papyrus', fontStyle: 'oblique', fontWeight: 'bold', fontSize: '1.5em' }}>
+            Bringing inventive fusion cuisine to your special event using the freshest ingredients & taking you on a flavorful & health adventure
         </div>
     )
 }

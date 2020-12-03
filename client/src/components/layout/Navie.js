@@ -8,10 +8,10 @@ export const Navie = props => {
 
     return (
 
-        <div>
+        <div className='container'>
             <Navbar bg="white" expand="lg">
                 <Navbar.Brand>
-                    <Link to='/' className='home_link'>
+                    <Link to='/' className='home_link' style={{ textDecoration: 'none' }}>
                         <p className='main_name'>EatKraveLove <small className="little_name">by Chef Sank</small></p>
                     </Link>
                 </Navbar.Brand>
@@ -20,12 +20,12 @@ export const Navie = props => {
                     <Nav className='right_navlinks' >
                         {props.hideRegisterLogin &&
                             <Fragment>
-                                <Nav.Link as={Link} to='/register'
-                                    className='little_linkies'
-                                >Register</Nav.Link>
-                                <Nav.Link as={Link} to='/login'
-                                    className='little_linkies'
-                                >Login</Nav.Link>
+                                <Nav.Link as={Link} to='/register' className='little_linkies' >
+                                    Register
+                                </Nav.Link>
+                                <Nav.Link as={Link} to='/login' className='little_linkies' >
+                                    Login
+                                </Nav.Link>
                             </Fragment>
                         }
                         {props.showHiddenTabs &&
@@ -49,7 +49,7 @@ export const Navie = props => {
             <Navbar fixed="bottom">
                 <Navbar.Brand>
                     <i className='fab fa-instagram'></i>
-                    <a className='footer_anchortag' href='https://www.instagram.com/eatkravelove/?hl=en' target="_blank" rel="noreferrer"> Follow on Instagram</a>
+                    <a style={{ textDecoration: 'none' }} className='footer_anchortag' href='https://www.instagram.com/eatkravelove/?hl=en' target="_blank" rel="noreferrer"> Follow on Instagram</a>
                 </Navbar.Brand>
             </Navbar>
         </div>

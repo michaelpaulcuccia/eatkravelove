@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Col, Row } from "react-bootstrap";
 import Caro from './landingComponents/Caro';
 import LandingQuote from './landingComponents/LandingQuote';
@@ -8,11 +8,10 @@ const Landing = () => {
 
 
     return (
-
-        <Fragment>
+        <div className='container'>
             <Row>
 
-                <Col sm={1}>
+                <Col sm={2}>
                     <LandingQuote />
                 </Col>
 
@@ -20,18 +19,13 @@ const Landing = () => {
                     <Caro />
                 </Col>
 
-                <Col sm={4}>
+                <Col sm={3}>
                     <LandingQuoteTwo />
                 </Col>
 
             </Row>
-        </Fragment>
 
-
-
-
-
-
+        </div>
     )
 }
 
