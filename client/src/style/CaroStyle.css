@@ -1,26 +1,24 @@
-/*585 width, 325 height*/
-
 .carousel {
-    width: 412.5px;
+    width: 50%;
     margin: auto;
   }
 
   /*Tablets */
-  /*
+
 @media(max-width: 768px){
   .carousel {
-  
+    width: 75%;
+    margin: auto;
   }
 
 }
-*/
 
 /*Mobile*/
-/*
+
 @media(max-width: 500px){
   .carousel {
-   
+    width: 75%;
+    margin: auto;
   }
     
 }
-*/

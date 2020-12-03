@@ -15,19 +15,21 @@
 }
 
 /*Tablets */
-/*
+
 @media(max-width: 768px){
+    .bottom_container 
     .container {
-    
+        width: 75%;
+        margin: 0 auto;
     }
 }
-*/
+
 
 /* Mobile */
 
 @media(max-width: 500px){
     .container {
-     max-width: 475px;
+     width: 475px;
      margin: 0 auto;
     }
 }
