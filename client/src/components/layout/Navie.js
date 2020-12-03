@@ -46,12 +46,6 @@ export const Navie = props => {
                 </Navbar.Collapse>
             </Navbar>
 
-            <Navbar fixed="bottom">
-                <Navbar.Brand>
-                    <i className='fab fa-instagram'></i>
-                    <a style={{ textDecoration: 'none' }} className='footer_anchortag' href='https://www.instagram.com/eatkravelove/?hl=en' target="_blank" rel="noreferrer"> Follow on Instagram</a>
-                </Navbar.Brand>
-            </Navbar>
         </div>
     )
 }

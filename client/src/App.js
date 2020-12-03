@@ -9,7 +9,6 @@ import Logout from './components/users/Logout';
 import OrderForm from './components/order/OrderForm';
 import Testimonials from './components/Testimonials';
 
-
 const App = () => {
 
   //context API

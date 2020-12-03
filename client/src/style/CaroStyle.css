@@ -1,11 +1,27 @@
-/* .carousel {
-    width: 585px;
-    height: 325px;
-    margin: auto;
-  } */
+/*585 width, 325 height*/
 
-  .carousel {
-    width: 75%;
-    height: 75%;
+.carousel {
+    width: 497.25px;
+    height: 276.25px;
     margin: auto;
   }
+
+  /*Tablets */
+@media(max-width: 768px){
+  .carousel {
+    width: 323.25px;
+    height: 179.50px;
+    margin: auto;
+  }
+
+}
+
+/*Mobile*/
+@media(max-width: 500px){
+  .carousel {
+    width: 248.50px;
+    height: 138px;
+    margin: auto;
+  }
+    
+}
