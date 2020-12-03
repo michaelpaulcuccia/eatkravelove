@@ -1,5 +1,11 @@
-.carousel {
+/* .carousel {
     width: 585px;
     height: 325px;
+    margin: auto;
+  } */
+
+  .carousel {
+    width: 60%;
+    height: 60%;
     margin: auto;
   }
