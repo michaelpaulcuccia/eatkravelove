@@ -45,7 +45,7 @@ const Register = () => {
         <div>
             <div className='register_main_container'>
 
-                <h2 className="register_head"><i className="fas fa-user"></i> Welcome New User! Please Register</h2>
+                <h2 className="register_head"><i className="fas fa-user"></i> Welcome New User!</h2>
 
                 <form className="form"
                     onSubmit={handleSubmit(onSubmit)}

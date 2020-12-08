@@ -1,11 +1,7 @@
 .register_main_container {
     margin-top: 55px;
-    margin-left: 31%;
+    margin-left: 36%;
     margin-right: 31%;
-}
-
-.form {
-    margin-left: 25%;
 }
 
 .register_head {
@@ -15,5 +11,5 @@
 .register_button {
     background-color: green;
     color: white;
+    padding: 2px 2px 2px 2px;
 }
-

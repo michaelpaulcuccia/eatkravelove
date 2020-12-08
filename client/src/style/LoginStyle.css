@@ -1,7 +1,7 @@
 .login_main_container {
     margin-top: 55px;
-    margin-left: 33%;
-    margin-right: 33%;
+    margin-left: 36%;
+    margin-right: 31%;
 }
 
 .form {
@@ -15,6 +15,7 @@
 .login_button {
     background-color: blue;
     color: white;
+    padding: 2px 2px 2px 2px;
 }
 
 .register_link {
