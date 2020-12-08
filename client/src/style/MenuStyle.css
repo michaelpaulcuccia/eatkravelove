@@ -3,20 +3,27 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .menu_box {
     /*top right bottom left*/
-    margin: 10px 0px 10px 0px;
+    margin: 15px 0px 10px 0px;
     font-size: 11px;
+    padding: 5px 15px 0 5px;
+    /* border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: .5px 2px .5px #EAEDEF; */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 3px 1px #EAEDEF;
+    width: 30%;
 }
 
 .head {
     text-align: center;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .image {
-    height: 25.5px;
-    width: 38.5px;
+    height: 23px;
+    width: 34.5px;
 }

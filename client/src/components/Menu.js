@@ -12,42 +12,8 @@ const Menu = () => {
 
         <div className='container'>
 
+
             <div className='flex_container'>
-                <div className='menu_box'>
-                    <p className='head'><strong> <img className='image' src={india} alt="india" /> Indo-European <img className='image' src={euro} alt="euro" /></strong></p>
-                    <p>Spicy Perogies (Vegan or Vegetarian) $15</p>
-                    <p>Spicy Penne Vodka (Vegetarian) $15</p>
-                    <p>Fettucini Alfredo (Vegetarian) $15</p>
-                    <p>Spicy Garlic Angel Hair (Vegan or Vegetarian) $15</p>
-                    <p>Stuffed Portabella (Vegan or Vegetarian) $15</p>
-                    <p>Mushroom Ravioli (Vegetarian) $15</p>
-                    <p>Chicken Parmesan $20</p>
-                    <p>Garlic Shrimp Linguini $20</p>
-                    <p>Masala Gambas (Shrimp in a Spicy Garlic Butter) $20</p>
-                    <hr></hr>
-                </div>
-
-                <div className='menu_box'>
-                    <p className='head'><strong><img className='image' src={mideast} alt="mideast" /> Middle Eastern</strong></p>
-                    <p>Tofu Keema with a mint and caramelized onions (Vegan) $15</p>
-                    <p>Spicy Onion Pilaf (Vegan) $15</p>
-                    <p>Spicy Mint Yogurt (Vegetarian) $10</p>
-                    <p>Labneh (Vegetarian) $10</p>
-                    <p>Mint Shwarma Chicken $20</p>
-                    <p>Beef Keema $20</p>
-                    <hr></hr>
-                </div>
-
-                <div className='menu_box'>
-                    <p className='head'><strong><img className='image' src={india} alt="india" /> Indian</strong></p>
-                    <p>Egg Bhurji (Vegetarian) $15</p>
-                    <p>Paneer Bhurji (Vegetarian) $15</p>
-                    <p>Mutter Paneer (Vegetarian) $15</p>
-                    <p>Aloo Gobi (Vegan) $15</p>
-                    <p>Dry Channa (Vegan) $15</p>
-                    <p>Channa Masala (Vegan) $15</p>
-                    <hr></hr>
-                </div>
 
 
                 <div className='menu_box'>
@@ -63,19 +29,6 @@ const Menu = () => {
                     <p>Chicken Enchiladas $15</p>
                     <p>Beef Enchiladas $15</p>
                     <p>Cilantro Lime Shrimp $20</p>
-                    <hr></hr>
-                </div>
-
-                <div className='menu_box'>
-                    <p className='head'><strong>Sandwiches/ Soups/ Salads</strong></p>
-                    <p>Cucumber Feta Salad (Vegetarian) $10/$20 (Small / Large)</p>
-                    <p>Spicy Caprese Sandwich (Vegetarian) $6</p>
-                    <p>Truffled Mushroom Sandwich (Vegan) $12</p>
-                    <p>Spicy Masala Sandwich (Vegan or Vegetarian) $6</p>
-                    <p>Italian Salad (Vegan or Vegetarian) $10/$20 (Small / Large)</p>
-                    <p>Roasted Cauliflower Soup (Vegan) $10/$20 (Small / Large)</p>
-                    <p>Baked Potato Soup (Vegan) $10/$20 (Small / Large)</p>
-                    <hr></hr>
                 </div>
 
                 <div className='menu_box'>
@@ -95,10 +48,57 @@ const Menu = () => {
                     <p>Chicken Green Curry $20</p>
                     <p>Thai Chili Chicken Basil $20</p>
                     <p>Chili Chicken $20</p>
-                    <hr></hr>
                 </div>
+
+                <div className='menu_box'>
+                    <p className='head'><strong> <img className='image' src={india} alt="india" /> Indo-European <img className='image' src={euro} alt="euro" /></strong></p>
+                    <p>Spicy Perogies (Vegan or Vegetarian) $15</p>
+                    <p>Spicy Penne Vodka (Vegetarian) $15</p>
+                    <p>Fettucini Alfredo (Vegetarian) $15</p>
+                    <p>Spicy Garlic Angel Hair (Vegan or Vegetarian) $15</p>
+                    <p>Stuffed Portabella (Vegan or Vegetarian) $15</p>
+                    <p>Mushroom Ravioli (Vegetarian) $15</p>
+                    <p>Chicken Parmesan $20</p>
+                    <p>Garlic Shrimp Linguini $20</p>
+                    <p>Masala Gambas (Shrimp in a Spicy Garlic Butter) $20</p>
+                </div>
+
+                <div className='menu_box'>
+                    <p className='head'><strong><img className='image' src={mideast} alt="mideast" /> Middle Eastern</strong></p>
+                    <p>Tofu Keema with a mint and caramelized onions (Vegan) $15</p>
+                    <p>Spicy Onion Pilaf (Vegan) $15</p>
+                    <p>Spicy Mint Yogurt (Vegetarian) $10</p>
+                    <p>Labneh (Vegetarian) $10</p>
+                    <p>Mint Shwarma Chicken $20</p>
+                    <p>Beef Keema $20</p>
+                </div>
+
+                <div className='menu_box'>
+                    <p className='head'><strong>Sandwiches/ Soups/ Salads</strong></p>
+                    <p>Cucumber Feta Salad (Vegetarian) $10/$20 (Small / Large)</p>
+                    <p>Spicy Caprese Sandwich (Vegetarian) $6</p>
+                    <p>Truffled Mushroom Sandwich (Vegan) $12</p>
+                    <p>Spicy Masala Sandwich (Vegan or Vegetarian) $6</p>
+                    <p>Italian Salad (Vegan or Vegetarian) $10/$20 (Small / Large)</p>
+                    <p>Roasted Cauliflower Soup (Vegan) $10/$20 (Small / Large)</p>
+                    <p>Baked Potato Soup (Vegan) $10/$20 (Small / Large)</p>
+                </div>
+
+                <div className='menu_box'>
+                    <p className='head'><strong><img className='image' src={india} alt="india" /> Indian</strong></p>
+                    <p>Egg Bhurji (Vegetarian) $15</p>
+                    <p>Paneer Bhurji (Vegetarian) $15</p>
+                    <p>Mutter Paneer (Vegetarian) $15</p>
+                    <p>Aloo Gobi (Vegan) $15</p>
+                    <p>Dry Channa (Vegan) $15</p>
+                    <p>Channa Masala (Vegan) $15</p>
+                </div>
+
             </div>
 
+            <br></br>
+            <br></br>
+            <br></br>
 
         </div>
     )
