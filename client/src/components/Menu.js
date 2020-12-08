@@ -1,5 +1,11 @@
 import React from 'react';
-import '../style/MenuStyle.css'
+import '../style/MenuStyle.css';
+import china from '../images/flags/china.png';
+import euro from '../images/flags/euro.jpg';
+import india from '../images/flags/india.jpg';
+import mex from '../images/flags/mex.jpg';
+import mideast from '../images/flags/mideast.png';
+import thai from '../images/flags/thai.png';
 
 const Menu = () => {
     return (
@@ -8,7 +14,7 @@ const Menu = () => {
 
             <div className='flex_container'>
                 <div className='menu_box'>
-                    <p className='head'><strong>Indo-European</strong></p>
+                    <p className='head'><strong> <img className='image' src={india} alt="india" /> Indo-European <img className='image' src={euro} alt="euro" /></strong></p>
                     <p>Spicy Perogies (Vegan or Vegetarian) $15</p>
                     <p>Spicy Penne Vodka (Vegetarian) $15</p>
                     <p>Fettucini Alfredo (Vegetarian) $15</p>
@@ -22,7 +28,7 @@ const Menu = () => {
                 </div>
 
                 <div className='menu_box'>
-                    <p className='head'><strong>Middle Eastern</strong></p>
+                    <p className='head'><strong><img className='image' src={mideast} alt="mideast" /> Middle Eastern</strong></p>
                     <p>Tofu Keema with a mint and caramelized onions (Vegan) $15</p>
                     <p>Spicy Onion Pilaf (Vegan) $15</p>
                     <p>Spicy Mint Yogurt (Vegetarian) $10</p>
@@ -33,7 +39,7 @@ const Menu = () => {
                 </div>
 
                 <div className='menu_box'>
-                    <p className='head'><strong>Indian</strong></p>
+                    <p className='head'><strong><img className='image' src={india} alt="india" /> Indian</strong></p>
                     <p>Egg Bhurji (Vegetarian) $15</p>
                     <p>Paneer Bhurji (Vegetarian) $15</p>
                     <p>Mutter Paneer (Vegetarian) $15</p>
@@ -43,8 +49,9 @@ const Menu = () => {
                     <hr></hr>
                 </div>
 
+
                 <div className='menu_box'>
-                    <p className='head'><strong>Indo- Mexican</strong></p>
+                    <p className='head'><strong><img className='image' src={india} alt="india" /> Indo-Mexican  <img className='image' src={mex} alt="mex" /></strong></p>
                     <p>Elote – Corn off the cob with Mexican and Indian inspired flavors (Vegan) $12</p>
                     <p>Spicy Cheesy Corn (Vegetarian) $12</p>
                     <p>Mushroom Enchiladas (Vegan) $20</p>
@@ -72,7 +79,7 @@ const Menu = () => {
                 </div>
 
                 <div className='menu_box'>
-                    <p className='head'><strong>Indo-Chinese / Thai Inspired</strong></p>
+                    <p className='head'><strong><img className='image' src={india} alt="india" /> Indo-Chinese <img className='image' src={china} alt="china" /> /  <img className='image' src={thai} alt="thai" /> Thai Inspired</strong></p>
                     <p>Gobi Manchurian (Vegan) $15</p>
                     <p>Spicy Soy Ginger Brussel Sprouts (Vegan) $15</p>
                     <p>Chili Tofu (Vegan) $15</p>
@@ -91,6 +98,7 @@ const Menu = () => {
                     <hr></hr>
                 </div>
             </div>
+
 
         </div>
     )
