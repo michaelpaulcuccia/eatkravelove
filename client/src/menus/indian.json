@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Egg Bhurji",
+    "price": 15,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Paneer Bhurji",
+    "price": 15,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Mutter Paneer",
+    "price": 15,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Aloo Gobi",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Dry Channa",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Channa Masala",
+    "price": 15,
+    "type": "vegan"
+  }
+]

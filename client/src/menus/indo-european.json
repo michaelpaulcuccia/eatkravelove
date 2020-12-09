@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Spicy Perogies",
+    "price": 15,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Spicy Penne Vodka",
+    "price": 15,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Fettucini Alfredo",
+    "price": 15,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Spicy Garlic Angel Hair",
+    "price": 15,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Stuffed Portabella",
+    "price": 15,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Mushroom Ravioli",
+    "price": 15,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Chicken Parmesan",
+    "price": 20,
+    "type": ""
+  },
+  {
+    "name": "Garlic Shrimp Linguini",
+    "price": 20,
+    "type": ""
+  },
+  {
+    "name": "Masala Gambas (Shrimp in a Spicy Garlic Butter)",
+    "price": 20,
+    "type": ""
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Cucumber Feta Salad - small",
+    "price": 10,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Cucumber Feta Salad - large",
+    "price": 20,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Spicy Caprese Sandwich",
+    "price": 6,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Truffled Mushroom Sandwich",
+    "price": 12,
+    "type": "vegan"
+  },
+  {
+    "name": "Spicy Masala Sandwich",
+    "price": 6,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Italian Salad - small",
+    "price": 10,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Italian Salad - large",
+    "price": 20,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Roasted Cauliflower Soup - small",
+    "price": 10,
+    "type": "vegan"
+  },
+  {
+    "name": "Roasted Cauliflower Soup - large",
+    "price": 20,
+    "type": "vegan"
+  },
+  {
+    "name": "Baked Potato Soup - small",
+    "price": 10,
+    "type": "vegan"
+  },
+  {
+    "name": "Baked Potato Soup - large",
+    "price": 20,
+    "type": "vegan"
+  }
+]

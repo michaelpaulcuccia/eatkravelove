@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tofu Keema with a mint and caramelized onions",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Spicy Onion Pilaf ",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Spicy Mint Yogurt",
+    "price": 10,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Labneh",
+    "price": 10,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Mint Shwarma Chicken",
+    "price": 20,
+    "type": ""
+  },
+  {
+    "name": "Beef Keema",
+    "price": 20,
+    "type": ""
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Gobi Manchurian",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Spicy Soy Ginger Brussel Sprouts",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Chili Tofu",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Chili Paneer",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Tom Kha Soup",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Thai Green Curry with Seitan in a basil and coriander base",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Tofu Beef and Broccoli",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Orange Seitan Chick’n",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Garlic Mushroom Fried Rice",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Chili Garlic Noodles with julienne vegetables",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Chili Thai Basil Rice",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Chicken and Broccoli",
+    "price": 20,
+    "type": ""
+  },
+  {
+    "name": "Chicken Green Curry",
+    "price": 20,
+    "type": ""
+  },
+  {
+    "name": "Thai Chili Chicken Basil",
+    "price": 20,
+    "type": ""
+  },
+  {
+    "name": "Chili Chicken",
+    "price": 20,
+    "type": ""
+  }
+]

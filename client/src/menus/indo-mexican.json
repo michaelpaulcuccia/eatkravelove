@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Elote – Corn off the cob with Mexican and Indian inspired flavors",
+    "price": 12,
+    "type": "vegan"
+  },
+  {
+    "name": "Spicy Cheesy Corn",
+    "price": 12,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Mushroom Enchiladas",
+    "price": 20,
+    "type": "vegan"
+  },
+  {
+    "name": "Spinach Enchiladas",
+    "price": 15,
+    "type": "vegan"
+  },
+  {
+    "name": "Indo Mex Cauliflower Enchiladas",
+    "price": 15,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Indo Mex Biriyani",
+    "price": 15,
+    "type": "vegan or vegetarian"
+  },
+  {
+    "name": "Spicy Paneer Enchiladas",
+    "price": "",
+    "type": "vegetarian"
+  },
+  {
+    "name": "Spicy Cheesy Cilantro Rice - small",
+    "price": 10,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Spicy Cheesy Cilantro Rice - large",
+    "price": 20,
+    "type": "vegetarian"
+  },
+  {
+    "name": "Chicken Enchiladas",
+    "price": 15,
+    "type": ""
+  },
+  {
+    "name": "Beef Enchiladas",
+    "price": 15,
+    "type": ""
+  },
+  {
+    "name": "Cilantro Lime Shrimp",
+    "price": 20,
+    "type": ""
+  }
+]
