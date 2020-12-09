@@ -16,6 +16,7 @@ app.use(cors());
 app.use('/api/register', require('./routes/api/register'));
 app.use('/api/login', require('./routes/api/login'));
 app.use('/api/orderform', require('./routes/api/orderform'));
+app.use('/api/indian', require('./routes/api/indian'));
 
 const PORT = process.env.PORT || 5000;
 
