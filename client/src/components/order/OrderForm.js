@@ -46,15 +46,18 @@ const OrderForm = () => {
             //Response in console
             console.log(req)
 
-            //TO DO - create success notification, reroute to a new page
+            //notify user of successful submission
+            window.alert("Your order has been placed")
+
+            //clear form
+            reset();
 
         } catch (err) {
             //TO DO - create failure notification
             console.log(err.response.data)
         }
 
-        //clear form
-        reset();
+
     }
 
     return (
@@ -101,7 +104,7 @@ const OrderForm = () => {
                 <div>
                     <label className='label_text' style={{ marginRight: '6px' }}>Meat or Meatless Options</label>
                     <select name="options" ref={register}>
-                        <option disabled value> -- select an option -- </option>
+                        <option disabled selected value='--select an option--'>--select an option--</option>
                         <option value="veg">Vegetarian</option>
                         <option value="nonveg">Non-Vegetarian</option>
                         <option value="mix">Mix</option>

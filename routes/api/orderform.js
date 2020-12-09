@@ -41,8 +41,7 @@ router.post('/', auth, async (req, res) => {
     try {
         //save to DB
         await order.save();
-
-        res.json(order);
+        res.json(order)
 
     } catch (err) {
         console.error(err.message);

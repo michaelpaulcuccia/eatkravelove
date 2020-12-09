@@ -12,9 +12,7 @@ const Menu = () => {
 
         <div className='container'>
 
-
             <div className='flex_container'>
-
 
                 <div className='menu_box'>
                     <p className='head'><strong><img className='image' src={india} alt="india" /> Indo-Mexican  <img className='image' src={mex} alt="mex" /></strong></p>
