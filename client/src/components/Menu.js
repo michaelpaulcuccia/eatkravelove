@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../style/MenuStyle.css';
 import china from '../images/flags/china.png';
 import euro from '../images/flags/euro.jpg';
@@ -8,6 +9,24 @@ import mideast from '../images/flags/mideast.png';
 import thai from '../images/flags/thai.png';
 
 const Menu = () => {
+
+    const [indianMenu, setIndianMenu] = useState([]);
+
+    const fetchData = async () => {
+        const indian = await axios.get('/api/indian');
+        setIndianMenu(indian.data);
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    let indianNames = [];
+    indianMenu.forEach(meal => {
+        indianNames.push(meal.name)
+    });
+
+
     return (
 
         <div className='container'>
@@ -43,7 +62,7 @@ const Menu = () => {
 
                 <div className='menu_box'>
                     <p className='head'><strong><img className='image' src={india} alt="india" /> Indian</strong></p>
-
+                    <div>{indianNames.map((name, i) => <li style={{ listStyleType: 'none' }} key={i}>{name}, </li>)}</div>
                 </div>
 
             </div>

@@ -24,6 +24,24 @@ router.post('/', async (req, res) => {
         res.status(500).send('Server Error');
     }
 
-})
+});
+
+//ROUTE: /api/indian
+//DESCRIPTION: Gets ALL meals from DB
+router.get('/', async (req, res) => {
+
+    //pass an empty object as arg to get ALL docs in collection
+    const data = await Indian.find({});
+
+    try {
+
+        res.send(data);
+
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server Error');
+    }
+
+});
 
 module.exports = router;
