@@ -8,7 +8,9 @@ export const Navie = props => {
 
     return (
 
-        <div className='container'>
+        <div
+        // className='container'
+        >
             <Navbar bg="white" expand="lg">
                 <Navbar.Brand>
                     <Link to='/' className='home_link' style={{ textDecoration: 'none' }}>

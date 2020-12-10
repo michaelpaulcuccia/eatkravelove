@@ -16,6 +16,13 @@ const Footer = () => {
                         rel="noreferrer"> Follow on Instagram
                 </a>
                 </Navbar.Brand>
+
+                <Navbar.Brand
+                    style={{ position: 'absolute', right: "0px" }}
+                >
+                    Put another Link and another Icon here
+                </Navbar.Brand>
+
             </Navbar>
         </div>
     )

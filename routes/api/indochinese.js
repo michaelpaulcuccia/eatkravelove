@@ -16,8 +16,8 @@ router.post('/', async (req, res) => {
 
     try {
 
-        const add = newMeal.save()
-        res.json('meal successfully added')
+        const add = newMeal.save();
+        res.json('meal successfully added');
 
     } catch (err) {
         console.error(err.message)
