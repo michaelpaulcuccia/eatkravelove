@@ -16,8 +16,11 @@ app.use(cors());
 app.use('/api/register', require('./routes/api/register'));
 app.use('/api/login', require('./routes/api/login'));
 app.use('/api/orderform', require('./routes/api/orderform'));
+//menu routes
 app.use('/api/indian', require('./routes/api/indian'));
 app.use('/api/indochinese', require('./routes/api/indochinese'));
+app.use('/api/indoeuropean', require('./routes/api/indoeuropean'));
+app.use('/api/indomexican', require('./routes/api/indomexican'));
 
 const PORT = process.env.PORT || 5000;
 
