@@ -21,6 +21,8 @@ app.use('/api/indian', require('./routes/api/indian'));
 app.use('/api/indochinese', require('./routes/api/indochinese'));
 app.use('/api/indoeuropean', require('./routes/api/indoeuropean'));
 app.use('/api/indomexican', require('./routes/api/indomexican'));
+app.use('/api/middleeastern', require('./routes/api/middleeastern'));
+app.use('/api/sandwichessoupssalads', require('./routes/api/sandwichessoupssalads'));
 
 const PORT = process.env.PORT || 5000;
 
