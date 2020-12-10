@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../style/MenuStyle.css';
 import china from '../images/flags/china.png';
 import euro from '../images/flags/euro.jpg';
@@ -8,6 +9,40 @@ import mideast from '../images/flags/mideast.png';
 import thai from '../images/flags/thai.png';
 
 const Menu = () => {
+
+    const [indianMenu, setIndianMenu] = useState([]);
+
+    const fetchData = async () => {
+        const indian = await axios.get('/api/indian');
+        setIndianMenu(indian.data);
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    //arrays for display
+    let indianDisplay = [];
+
+
+    //function to cleanUp *Menu for display
+    const cleanUp = (arr, newArr) => {
+
+        arr.forEach(element => {
+
+            let name = element.name;
+            let price = element.price;
+            let type = element.type;
+
+            let string = `${name} $${price} ${type}`;
+            newArr.push(string);
+        })
+    };
+
+    cleanUp(indianMenu, indianDisplay);
+
+    console.log(indianDisplay);
+
     return (
 
         <div className='container'>
@@ -84,12 +119,7 @@ const Menu = () => {
 
                 <div className='menu_box'>
                     <p className='head'><strong><img className='image' src={india} alt="india" /> Indian</strong></p>
-                    <p>Egg Bhurji (Vegetarian) $15</p>
-                    <p>Paneer Bhurji (Vegetarian) $15</p>
-                    <p>Mutter Paneer (Vegetarian) $15</p>
-                    <p>Aloo Gobi (Vegan) $15</p>
-                    <p>Dry Channa (Vegan) $15</p>
-                    <p>Channa Masala (Vegan) $15</p>
+                    {indianDisplay.map((item, i) => <p key={i}>{item}, </p>)}
                 </div>
 
             </div>

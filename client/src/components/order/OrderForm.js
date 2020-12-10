@@ -111,7 +111,7 @@ const OrderForm = () => {
                     </select>
                 </div>
 
-                <div style={{ textAlign: 'center', marginBottom: '7px' }}><small>All of the above fields are required.</small></div>
+                <div style={{ textAlign: 'center', marginBottom: '7px' }}><small>*** All of the above fields are required. ***</small></div>
 
                 <Form.Group controlId="exampleForm.ControlTextarea1">
                     <Form.Label className='label_text'>Special Requests, Dietary Restrictions, Allergies, Etc.</Form.Label>
