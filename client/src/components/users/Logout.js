@@ -25,9 +25,21 @@ const Logout = props => {
     };
 
     return (
-        <form onSubmit={handleLogOut}>
-            <button type='submit'>Logout</button>
-        </form>
+        <div className="container"
+            style={{ margin: 'auto', marginLeft: '40%', marginTop: '5%' }}
+        >
+            <strong>Are you sure you want to leave?</strong>
+            <br></br>
+            <br></br>
+            <form onSubmit={handleLogOut}
+                style={{ margin: 'auto', marginLeft: '8%' }}
+            >
+                <button type='submit'
+                    style={{ padding: '2px 2px 2px 2px' }}
+                >Logout</button>
+            </form>
+        </div>
+
     )
 }
 
