@@ -24,7 +24,6 @@ const Menu = () => {
     //arrays for display
     let indianDisplay = [];
 
-
     //function to cleanUp *Menu for display
     const cleanUp = (arr, newArr) => {
 
@@ -40,8 +39,6 @@ const Menu = () => {
     };
 
     cleanUp(indianMenu, indianDisplay);
-
-    console.log(indianDisplay);
 
     return (
 
