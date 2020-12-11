@@ -7,7 +7,7 @@ import Register from './components/users/Register';
 import Login from './components/users/Login';
 import Logout from './components/users/Logout';
 import OrderForm from './components/order/OrderForm';
-import Testimonials from './components/Testimonials';
+import About from './components/About';
 import Menu from './components/Menu';
 
 const App = () => {
@@ -52,7 +52,7 @@ const App = () => {
             />
             <Route exact path='/menu' component={Menu} />
             <Route exact path='/orderform' component={OrderForm} />
-            <Route exact path='/testimonials' component={Testimonials} />
+            <Route exact path='/about' component={About} />
           </Switch>
         </Fragment>
       </UserContext.Provider>

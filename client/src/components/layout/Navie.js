@@ -38,8 +38,8 @@ export const Navie = props => {
                                 <NavDropdown.Item as={Link} to='/orderform' className='little_linkies' >
                                     Order
                                 </NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to='/testimonials' className='little_linkies' >
-                                    Testimonials
+                                <NavDropdown.Item as={Link} to='/about' className='little_linkies' >
+                                    About
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item as={Link} to='/logout' className='little_linkies' >

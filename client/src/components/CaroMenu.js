@@ -1,12 +1,13 @@
 import React from 'react'
 import { Carousel } from "react-bootstrap";
+import beTheChange from '../images/CaroMenuImages/beTheChange.jpg';
+import middlesexCountyNJ from '../images/CaroMenuImages/middlesexCountyNJ.jpg';
+import NewarkBethIsrealOne from '../images/CaroMenuImages/NewarkBethIsrealOne.jpg';
+import NewarkBethIsrealTwo from '../images/CaroMenuImages/NewarkBethIsraelTwo.jpg';
+import weMatch from '../images/CaroMenuImages/weMatch.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import chef_sank from '../../../images/chef_sank.jpg';
-import pic_two from '../../../images/pic_two.jpg';
-import pic_three from '../../../images/pic_three.jpg';
-import '../../../style/CaroStyle.css';
 
-const Caro = () => {
+const CaroMenu = () => {
 
     //removes next and prev 'carrot' pointers from carousel
     let nextIcon = '';
@@ -25,7 +26,7 @@ const Caro = () => {
                 <Carousel.Item interval={5000}>
                     <img
                         className="d-block w-100"
-                        src={chef_sank}
+                        src={beTheChange}
                         alt="First slide"
                     />
                 </Carousel.Item>
@@ -33,7 +34,7 @@ const Caro = () => {
                 <Carousel.Item interval={8000}>
                     <img
                         className="d-block w-100"
-                        src={pic_two}
+                        src={middlesexCountyNJ}
                         alt="Third slide"
                     />
                 </Carousel.Item>
@@ -41,8 +42,24 @@ const Caro = () => {
                 <Carousel.Item interval={8000}>
                     <img
                         className="d-block w-100"
-                        src={pic_three}
+                        src={NewarkBethIsrealOne}
                         alt="Third slide"
+                    />
+                </Carousel.Item>
+
+                <Carousel.Item interval={8000}>
+                    <img
+                        className="d-block w-100"
+                        src={NewarkBethIsrealTwo}
+                        alt="Fourth slide"
+                    />
+                </Carousel.Item>
+
+                <Carousel.Item interval={8000}>
+                    <img
+                        className="d-block w-100"
+                        src={weMatch}
+                        alt="Fifth slide"
                     />
                 </Carousel.Item>
 
@@ -51,4 +68,4 @@ const Caro = () => {
     )
 }
 
-export default Caro;
+export default CaroMenu;
