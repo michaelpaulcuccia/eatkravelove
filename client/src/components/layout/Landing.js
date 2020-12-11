@@ -8,6 +8,7 @@ const Landing = () => {
     return (
         <div className='container'>
             <Caro />
+            <div>Bringing inventive fusion cuisine to your special event using the freshest ingredients and taking you a flavorful and healthy adventure.</div>
             <Footer />
         </div>
     )

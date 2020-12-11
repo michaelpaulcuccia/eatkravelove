@@ -11,7 +11,7 @@ export const Navie = props => {
         <div
         // className='container'
         >
-            <Navbar bg="white" expand="lg">
+            <Navbar bg="white" expand="sm">
                 <Navbar.Brand>
                     <Link to='/' className='home_link' style={{ textDecoration: 'none' }}>
                         <p className='main_name'>EatKraveLove <small className="little_name">by Chef Sank</small></p>
@@ -33,13 +33,13 @@ export const Navie = props => {
                         <Nav.Link as={Link} to='/menu' className='little_linkies' >
                             Menu
                                 </Nav.Link>
+                        <Nav.Link as={Link} to='/about' className='little_linkies' >
+                            About
+                                </Nav.Link>
                         {props.showHiddenTabs &&
                             <NavDropdown className='useroptions_dropdown' title="User Options" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to='/orderform' className='little_linkies' >
                                     Order
-                                </NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to='/about' className='little_linkies' >
-                                    About
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item as={Link} to='/logout' className='little_linkies' >
