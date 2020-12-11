@@ -6,19 +6,21 @@
     align-items: stretch;
 }
 
+/*
+MARGINS and PADDING: 
+top right bottom left
+*/
+
 .menu_box {
-    /*top right bottom left*/
     margin: 15px 0px 10px 0px;
     font-size: 11px;
     padding: 5px 15px 0 5px;
-    /* border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: .5px 2px .5px #EAEDEF; */
     border: 1px solid rgba(0, 0, 0, 0.15);
     box-shadow: 1px 3px 1px #EAEDEF;
     width: 30%;
 }
 
-.head {
+.menu_title {
     text-align: center;
     font-size: 13px;
 }
