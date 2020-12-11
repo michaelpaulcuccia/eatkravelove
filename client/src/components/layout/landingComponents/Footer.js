@@ -9,7 +9,10 @@ const Footer = () => {
                 <Navbar.Brand>
                     <i className='fab fa-instagram'></i>
                     <a
-                        style={{ textDecoration: 'none' }}
+                        style={{
+                            textDecoration: 'none',
+                            fontFamily: 'Architects Daughter, cursive',
+                        }}
                         className='footer_anchortag'
                         href='https://www.instagram.com/eatkravelove/?hl=en'
                         target="_blank"
@@ -18,7 +21,10 @@ const Footer = () => {
                 </Navbar.Brand>
 
                 <Navbar.Brand
-                    style={{ position: 'absolute', right: "0px" }}
+                    style={{
+                        position: 'absolute', right: "0px",
+                        fontFamily: 'Architects Daughter, cursive'
+                    }}
                 >
                     Put another Link and another Icon here
                 </Navbar.Brand>
