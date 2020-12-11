@@ -1,9 +1,9 @@
 import React from 'react'
 import { Carousel } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import chef_sank from '../../../images/chef_sank.jpg';
-import pic_two from '../../../images/pic_two.jpg';
-import pic_three from '../../../images/pic_three.jpg';
+import chef_sank from '../../../images/chefSank/chef_sank.jpg';
+import pic_two from '../../../images/chefSank/pic_two.jpg';
+import pic_three from '../../../images/chefSank/pic_three.jpg';
 import '../../../style/CaroStyle.css';
 
 const Caro = () => {

@@ -120,7 +120,9 @@ const OrderForm = () => {
 
 
 
-                < input type="submit" value="Submit" />
+                < input type="submit" value="Submit"
+                    style={{ padding: '2px 2px 2px 2px' }}
+                />
             </form>
 
         </div>
