@@ -10,6 +10,7 @@
 
 .login_head {
     color: black;
+    font-family: 'Architects Daughter', cursive;
 }
 
 .login_button {
@@ -20,6 +21,7 @@
 
 .register_link {
     margin-left: 15%;  
+    font-family: 'Architects Daughter', cursive;
 }
 
 .text_link {
