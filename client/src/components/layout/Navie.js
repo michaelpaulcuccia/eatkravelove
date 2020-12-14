@@ -39,7 +39,7 @@ export const Navie = props => {
                         {props.showHiddenTabs &&
                             <NavDropdown className='useroptions_dropdown' title="User Options" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to='/orderform' className='little_linkies' >
-                                    Order
+                                    Catering
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item as={Link} to='/logout' className='little_linkies' >

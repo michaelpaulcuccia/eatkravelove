@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="bottom_container">
             <Navbar fixed="bottom">
                 <Navbar.Brand>
-                    <i className='fab fa-instagram'></i>
+                    <i className='fab fa-instagram-square'></i>
                     <a
                         style={{
                             textDecoration: 'none',
@@ -26,7 +26,17 @@ const Footer = () => {
                         fontFamily: 'Architects Daughter, cursive'
                     }}
                 >
-                    Put another Link and another Icon here
+                    <i className='fab fa-linkedin'></i>
+                    <a
+                        style={{
+                            textDecoration: 'none',
+                            fontFamily: 'Architects Daughter, cursive',
+                        }}
+                        className='footer_anchortag'
+                        href='https://www.linkedin.com/in/sanketa-jain-86b3222a/'
+                        target="_blank"
+                        rel="noreferrer"> Follow on LinkedIn
+                </a>
                 </Navbar.Brand>
 
             </Navbar>
