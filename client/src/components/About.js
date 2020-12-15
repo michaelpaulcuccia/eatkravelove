@@ -1,4 +1,6 @@
 import React from 'react';
+import oneNBI from '../images/nbi/oneNBI.jpg'
+import twoNBI from '../images/nbi/twoNBI.jpg'
 
 const About = () => {
     return (
@@ -12,6 +14,24 @@ const About = () => {
 
             <br></br>
 
+            <div
+                className="container"
+                style={{ fontFamily: 'Architects Daughter, cursive', fontSize: '18px', marginLeft: '35%' }}
+            >
+                Serving Newark Bethlehem Israel Frontline Workers
+            </div>
+
+            <br></br>
+
+            <div className='container'
+                style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}
+            >
+                <img src={oneNBI} alt='oneNBI' />
+                <img src={twoNBI} alt='twoNBI' />
+            </div>
+
+            <br></br>
+
             <div className="container"
                 style={{ fontFamily: 'Architects Daughter, cursive', fontSize: '18px' }}
             >
@@ -21,12 +41,13 @@ const About = () => {
                 </strong>
 
                 <br></br>
-                We will match your donation and deliver fresh vegetables, fruits and dairy to those in need. We have teamed with 'Be The Change' of Kean University to provide fresh groceries to Middlesex, Essex, and Union Counties. Venmo @SANKETA
-            </div>
+    We will match your donation and deliver fresh vegetables, fruits and dairy to those in need. We have teamed with 'Be The Change' of Kean University to provide fresh groceries to Middlesex, Essex, and Union Counties. Venmo @SANKETA
+                </div>
 
+            <br></br>
+            <br></br>
 
         </div>
-
 
     )
 }
