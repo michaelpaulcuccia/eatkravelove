@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/User');
-const config = require('config');
+//const config = require('config');
 const jwt = require('jsonwebtoken');
 
 //REGISTE A NEW USER
@@ -50,7 +50,7 @@ router.post('/', async (req, res) => {
         }
 
         //Return jsonwebtoken
-        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 36000 }, (err, token) => {
+        jwt.sign(payload, keys.jwtSecret, { expiresIn: 36000 }, (err, token) => {
             if (err) {
                 throw err
             } else {
