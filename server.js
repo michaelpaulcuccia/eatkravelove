@@ -1,5 +1,4 @@
 const express = require('express');
-const connectDB = require('./config/db');
 const cors = require('cors');
 const keys = require('./productionKeys');
 const path = require('path');
