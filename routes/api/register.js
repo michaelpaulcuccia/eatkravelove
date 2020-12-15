@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const User = require('../../models/User');
 //const config = require('config');
 const jwt = require('jsonwebtoken');
+const keys = require('../../productionKeys');
 
 //REGISTE A NEW USER
 //ROUTE: api/register

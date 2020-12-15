@@ -4,7 +4,7 @@ const User = require('../../models/User');
 const bcrypt = require('bcrypt');
 //const config = require('config');
 const jwt = require('jsonwebtoken');
-const keys = require('./productionKeys');
+const keys = require('../../productionKeys');
 
 //LOGIN
 //ROUTE: api/login
