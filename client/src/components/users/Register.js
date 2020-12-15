@@ -84,7 +84,10 @@ const Register = () => {
                 </form>
 
 
+
             </div>
+
+            <h2 className="register_lower">Registered Users have access to catering.</h2>
 
         </div>
     )

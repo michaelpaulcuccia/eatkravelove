@@ -8,11 +8,11 @@ const Landing = () => {
     return (
 
         <div>
-            <div className='container'>
+            <div className='container'
+                style={{ marginTop: '10px' }}
+            >
                 <Caro />
-
                 <Footer />
-
 
             </div>
 
@@ -24,13 +24,11 @@ const Landing = () => {
                     fontSize: '1.5rem',
                     textAlign: 'center',
                     marginTop: '20px',
-                    marginBottom: '20px'
                 }}
-            > Bringing inventive fusion cuisine to your special event using the freshest ingredients and taking you a flavorful and healthy adventure.
+            >
+                Bringing inventive fusion cuisine to your special event using the freshest ingredients and taking you a flavorful and healthy adventure.
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
+
         </div>
     )
 }
