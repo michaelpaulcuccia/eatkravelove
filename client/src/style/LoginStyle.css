@@ -19,8 +19,9 @@
     padding: 2px 2px 2px 2px;
 }
 
-.register_link {
-    margin-left: 15%;  
+.login_lower {
+    margin-left: 34%;
+    color: black;
     font-family: 'Architects Daughter', cursive;
 }
 

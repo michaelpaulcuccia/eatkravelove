@@ -86,11 +86,9 @@ const Login = props => {
                     <input type="submit" className="login_button" value="Login" />
                 </form>
 
-                <p className="register_link">
-                    Don't have an account? <Link to='/register' className='text_link'>Sign Up</Link>
-                </p>
-
             </div>
+
+            <h2 className="login_lower">Don't have an account? <Link to='/register' className='text_link'>Sign Up</Link></h2>
 
         </div>
     )
