@@ -9,12 +9,13 @@ const app = express();
 //connect database
 const connectDB = async () => {
     try {
-        await mongoose.connect(keys.mongoURI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false
-        });
+        await mongoose.connect(keys.mongoURI,
+            {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+                useCreateIndex: true,
+                useFindAndModify: false
+            });
         console.log('MongoDB Connected')
     } catch (err) {
         console.error(err.message);
