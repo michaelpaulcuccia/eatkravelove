@@ -9,9 +9,7 @@ const app = express();
 //connect database
 const connectDB = async () => {
     try {
-        await mongoose.connect(
-            "mongodb+srv://ekladmin:11920sank@cluster0.iyihp.mongodb.net/<dbname>?retryWrites=true&w=majority",
-            //keys.mongoURI,
+        await mongoose.connect(keys.mongoURI,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
