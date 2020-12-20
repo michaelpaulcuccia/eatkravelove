@@ -1,0 +1,6 @@
+.pic_holder {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
