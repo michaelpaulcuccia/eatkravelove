@@ -13,7 +13,7 @@ export const Navie = props => {
         >
             <Navbar bg="white" expand="sm">
                 <Navbar.Brand>
-                    <Link to='/' className='home_link' style={{ textDecoration: 'none' }}>
+                    <Link to='/' className='home_link'>
                         <p className='main_name'>EatKraveLove <small className="little_name">by Chef Sank</small></p>
                     </Link>
                 </Navbar.Brand>

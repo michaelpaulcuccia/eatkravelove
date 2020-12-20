@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar } from "react-bootstrap";
-import '../../../style/FooterStyle.css'
 
 const Footer = () => {
     return (
@@ -12,6 +11,7 @@ const Footer = () => {
                         style={{
                             textDecoration: 'none',
                             fontFamily: 'Architects Daughter, cursive',
+                            fontSize: "2.5rem"
                         }}
                         className='footer_anchortag'
                         href='https://www.instagram.com/eatkravelove/?hl=en'
@@ -31,6 +31,7 @@ const Footer = () => {
                         style={{
                             textDecoration: 'none',
                             fontFamily: 'Architects Daughter, cursive',
+                            fontSize: "2.5rem"
                         }}
                         className='footer_anchortag'
                         href='https://www.linkedin.com/in/sanketa-jain-86b3222a/'
