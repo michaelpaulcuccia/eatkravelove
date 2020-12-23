@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
-const config = require('config');
+//const config = require('config');
+const keys = require('../productionKeys');
 
 //middleware with access to req, res objects and next(callback)  
 module.exports = function (req, res, next) {
@@ -16,7 +17,10 @@ module.exports = function (req, res, next) {
     try {
 
         //decode token
-        const decoded = jwt.verify(token, config.get('jwtSecret'));
+        //dev
+        //const decoded = jwt.verify(token, config.get('jwtSecret'));
+        //prod
+        const decoded = jwt.verify(token, keys.jwtSecret);
 
         //take request object and assign a value to user
         req.user = decoded.user;
