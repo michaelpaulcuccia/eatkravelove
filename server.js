@@ -9,7 +9,8 @@ const app = express();
 //connect database
 const connectDB = async () => {
     try {
-        await mongoose.connect(keys.mongoURI,
+        await mongoose.connect(
+            keys.mongoURI,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,

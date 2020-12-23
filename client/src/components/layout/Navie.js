@@ -8,9 +8,7 @@ export const Navie = props => {
 
     return (
 
-        <div
-        // className='container'
-        >
+        <div>
             <Navbar bg="white" expand="sm">
                 <Navbar.Brand>
                     <Link to='/' className='home_link'>

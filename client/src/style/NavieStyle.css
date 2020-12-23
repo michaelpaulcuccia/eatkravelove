@@ -6,6 +6,7 @@
     font-family: 'Architects Daughter', cursive;
     font-weight: 600;
     font-size: 3.5rem;
+    margin-left: 10%;
 }
 
 .little_name {
@@ -13,7 +14,7 @@
 }
 
 .right_navlinks {
-    margin-left: 75%;
+    margin-left: 70%;
 }
 
 
