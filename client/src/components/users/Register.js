@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import '../../style/RegisterStyle.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Register = () => {
 
@@ -42,54 +42,51 @@ const Register = () => {
     }
 
     return (
-        <div>
-            <div className='register_main_container'>
+        <Container className='py-5'>
+            <Row className="justify-content-md-center">
 
-                <h2 className="register_head"><i className="fas fa-user"></i> Welcome New User!</h2>
+                <Col md="auto">
+                    <h1 className="large text-primary">Register</h1>
+                    <p className="lead"><i className="fas fa-user"></i> Welcome New User!</p>
+                    <form className="form"
+                        onSubmit={handleSubmit(onSubmit)}
+                    >
+                        <div className="form-group">
+                            <input type="text"
+                                placeholder="Name"
+                                name="name"
+                                required
+                                ref={register}
+                            />
+                        </div>
 
-                <form className="form"
-                    onSubmit={handleSubmit(onSubmit)}
-                >
+                        <div className="form-group">
+                            <input type="email"
+                                placeholder="Email Address"
+                                name="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                required
+                                ref={register}
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <input type="text"
-                            placeholder="Name"
-                            name="name"
-                            required
-                            ref={register}
-                        />
-                    </div>
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                name="password"
+                                required
+                                ref={register}
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <input type="email"
-                            placeholder="Email Address"
-                            name="email"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            required
-                            ref={register}
-                        />
-                    </div>
+                        <input type="submit" className="register_button" value="Register" />
+                    </form>
 
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            name="password"
-                            required
-                            ref={register}
-                        />
-                    </div>
-
-                    <input type="submit" className="register_button" value="Register" />
-                </form>
-
-
-
-            </div>
-
-            <h2 className="register_lower">Registered Users have access to catering.</h2>
-
-        </div>
+                    <p>Registered Users have access to catering.</p>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

@@ -3,7 +3,6 @@ import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import '../../style/LoginStyle.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Login = props => {
