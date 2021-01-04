@@ -4,6 +4,7 @@ import UserContext from '../../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import '../../style/LoginStyle.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Login = props => {
 
@@ -54,43 +55,43 @@ const Login = props => {
     }
 
     return (
-        <div>
-            <div className='login_main_container'>
+        <Container className='py-5'>
+            <Row className="justify-content-md-center">
 
-                <h2 className="login_head"><i className="fas fa-user"></i> Log In To Your Account</h2>
+                <Col md="auto">
+                    <h1 className="large text-primary">Sign In</h1>
+                    <p className="lead"><i className="fas fa-user"></i> Sign Into Your Account</p>
+                    <form className="form"
+                        onSubmit={handleSubmit(onSubmit)}
+                    >
 
-                <form className="form"
-                    onSubmit={handleSubmit(onSubmit)}
-                >
+                        <div className="form-group">
+                            <input type="email"
+                                placeholder="Email Address"
+                                name="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                required
+                                ref={register}
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <input type="email"
-                            placeholder="Email Address"
-                            name="email"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            required
-                            ref={register}
-                        />
-                    </div>
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                name="password"
+                                required
+                                ref={register}
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            name="password"
-                            required
-                            ref={register}
-                        />
-                    </div>
+                        <input type="submit" value="Login" />
+                    </form>
 
-                    <input type="submit" className="login_button" value="Login" />
-                </form>
-
-            </div>
-
-            <h2 className="login_lower">Don't have an account? <Link to='/register' className='text_link'>Sign Up</Link></h2>
-
-        </div>
+                    <p>Don't have an account? <Link to='/register' className='text_link'>Sign Up</Link></p>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
