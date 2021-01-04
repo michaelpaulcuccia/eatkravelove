@@ -10,7 +10,8 @@ const app = express();
 const connectDB = async () => {
     try {
         await mongoose.connect(
-            keys.mongoURI,
+            "mongodb+srv://ekladmin:11920sank@cluster0.iyihp.mongodb.net/<dbname>?retryWrites=true&w=majority",
+            //keys.mongoURI,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
