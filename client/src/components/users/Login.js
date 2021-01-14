@@ -3,7 +3,7 @@ import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 
 const Login = props => {
 
@@ -54,42 +54,49 @@ const Login = props => {
     }
 
     return (
-        <Container className='py-5'>
-            <Row className="justify-content-md-center">
 
-                <Col md="auto">
-                    <h1 className="large text-primary">Sign In</h1>
-                    <p className="lead"><i className="fas fa-user"></i> Sign Into Your Account</p>
-                    <form className="form"
-                        onSubmit={handleSubmit(onSubmit)}
+        <Container>
+            <h1 style={{ padding: '1rem 0' }}><i className="fas fa-user"></i> Sign Into Your Account</h1>
+
+            <Form className='py-3'
+                onSubmit={handleSubmit(onSubmit)}
+            >
+                <Form.Group controlId='email'>
+                    <Form.Label>Email Address</Form.Label>
+                    <Form.Control
+                        type="email"
+                        placeholder='Enter Email'
+                        required
+                        name="email"
+                        ref={register}
+                        style={{ width: '60%' }}
                     >
+                    </Form.Control>
+                </Form.Group>
 
-                        <div className="form-group">
-                            <input type="email"
-                                placeholder="Email Address"
-                                name="email"
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                required
-                                ref={register}
-                            />
-                        </div>
+                <Form.Group controlId='password'>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                        type="password"
+                        placeholder='Enter Password'
+                        required
+                        name="password"
+                        ref={register}
+                        style={{ width: '60%' }}
+                    >
+                    </Form.Control>
+                </Form.Group>
 
-                        <div className="form-group">
-                            <input
-                                type="password"
-                                placeholder="Password"
-                                name="password"
-                                required
-                                ref={register}
-                            />
-                        </div>
+                <Button type='submit' variant='primary'>Sign In</Button>
 
-                        <input type="submit" value="Login" />
-                    </form>
+            </Form>
 
-                    <p>Don't have an account? <Link to='/register' className='text_link'>Sign Up</Link></p>
+            <Row className='py-3'>
+                <Col>
+                    Don't have an account? <Link to='/register'>Sign Up</Link>
                 </Col>
             </Row>
+
         </Container>
     )
 }

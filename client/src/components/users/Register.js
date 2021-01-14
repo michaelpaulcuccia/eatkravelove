@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 
 const Register = () => {
 
     const { register, handleSubmit, reset } = useForm();
-    const [token, setToken] = useState('');
+    const [setToken] = useState('');
     const history = useHistory();
 
     const onSubmit = async data => {
@@ -42,50 +42,62 @@ const Register = () => {
     }
 
     return (
-        <Container className='py-5'>
-            <Row className="justify-content-md-center">
+        <Container>
+            <h1 style={{ padding: '1rem 0' }}><i className="fas fa-user"></i> Welcome New User</h1>
 
-                <Col md="auto">
-                    <h1 className="large text-primary">Register</h1>
-                    <p className="lead"><i className="fas fa-user"></i> Welcome New User!</p>
-                    <form className="form"
-                        onSubmit={handleSubmit(onSubmit)}
+            <Form className='py-3'
+                onSubmit={handleSubmit(onSubmit)}
+            >
+
+                <Form.Group controlId='name'>
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder='Enter Name'
+                        required
+                        name="name"
+                        ref={register}
+                        style={{ width: '60%' }}
                     >
-                        <div className="form-group">
-                            <input type="text"
-                                placeholder="Name"
-                                name="name"
-                                required
-                                ref={register}
-                            />
-                        </div>
+                    </Form.Control>
+                </Form.Group>
 
-                        <div className="form-group">
-                            <input type="email"
-                                placeholder="Email Address"
-                                name="email"
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                required
-                                ref={register}
-                            />
-                        </div>
+                <Form.Group controlId='email'>
+                    <Form.Label>Email Address</Form.Label>
+                    <Form.Control
+                        type="email"
+                        placeholder='Enter Email'
+                        required
+                        name="email"
+                        ref={register}
+                        style={{ width: '60%' }}
+                    >
+                    </Form.Control>
+                </Form.Group>
 
-                        <div className="form-group">
-                            <input
-                                type="password"
-                                placeholder="Password"
-                                name="password"
-                                required
-                                ref={register}
-                            />
-                        </div>
+                <Form.Group controlId='password'>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                        type="password"
+                        placeholder='Enter Password'
+                        required
+                        name="password"
+                        ref={register}
+                        style={{ width: '60%' }}
+                    >
+                    </Form.Control>
+                </Form.Group>
 
-                        <input type="submit" className="register_button" value="Register" />
-                    </form>
+                <Button type='submit' variant='primary'>Register</Button>
 
-                    <p>Registered Users have access to catering.</p>
+            </Form>
+
+            <Row className='py-3'>
+                <Col>
+                    <h3>Registered Users have access to our catering.</h3>
                 </Col>
             </Row>
+
         </Container>
     )
 }
