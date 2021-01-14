@@ -70,7 +70,9 @@ const Menu = ({ imageStyle }) => {
         <Container className="main_cont">
             <Row md={3} sm={2}>
                 <Col className='menu_col'>
-                    <Card className="py-3">
+                    <Card
+                        className="px-1 py-1"
+                    >
                         <div style={{ margin: 'auto' }}>
                             <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indo-Mexican  <img className='img_menu' src={mex} alt="mex" /></strong></h4>
                         </div>
@@ -80,7 +82,9 @@ const Menu = ({ imageStyle }) => {
                     </Card>
                 </Col>
                 <Col className='menu_col'>
-                    <Card className="py-3">
+                    <Card
+                        className="px-1 py-1"
+                    >
                         <div style={{ margin: 'auto' }}>
                             <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indo-Chinese  <img className='img_menu' src={china} alt="china" /></strong></h4>
                         </div>
@@ -90,7 +94,9 @@ const Menu = ({ imageStyle }) => {
                     </Card>
                 </Col>
                 <Col className='menu_col'>
-                    <Card className="py-3">
+                    <Card
+                        className="px-1 py-1"
+                    >
                         <div style={{ margin: 'auto' }}>
                             <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indo-European  <img className='img_menu' src={euro} alt="euro" /></strong></h4>
                         </div>
@@ -100,7 +106,9 @@ const Menu = ({ imageStyle }) => {
                     </Card>
                 </Col>
                 <Col className='menu_col'>
-                    <Card className="py-3">
+                    <Card
+                        className="px-1 py-1"
+                    >
                         <div style={{ margin: 'auto' }}>
                             <h4 className='menu_title'><strong><img className='img_menu' src={mideast} alt="mideast" /> Middle Eastern </strong></h4>
                         </div>
@@ -110,7 +118,9 @@ const Menu = ({ imageStyle }) => {
                     </Card>
                 </Col>
                 <Col className='menu_col'>
-                    <Card className="py-3">
+                    <Card
+                        className="px-1 py-1"
+                    >
                         <div style={{ margin: 'auto' }}>
                             <h4 className='menu_title'><strong>Soups and Salads</strong></h4>
                         </div>
@@ -120,7 +130,9 @@ const Menu = ({ imageStyle }) => {
                     </Card>
                 </Col>
                 <Col className='menu_col'>
-                    <Card className="py-3">
+                    <Card
+                        className="px-1 py-1"
+                    >
                         <div style={{ margin: 'auto' }}>
                             <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indian </strong></h4>
                         </div>

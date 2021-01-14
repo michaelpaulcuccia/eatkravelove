@@ -3,7 +3,8 @@ import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col, Image } from 'react-bootstrap';
+import one from '../../images/landing/one.PNG'
 
 const Login = props => {
 
@@ -56,46 +57,56 @@ const Login = props => {
     return (
 
         <Container>
-            <h1 style={{ padding: '1rem 0' }}><i className="fas fa-user"></i> Sign Into Your Account</h1>
 
-            <Form className='py-3'
-                onSubmit={handleSubmit(onSubmit)}
-            >
-                <Form.Group controlId='email'>
-                    <Form.Label>Email Address</Form.Label>
-                    <Form.Control
-                        type="email"
-                        placeholder='Enter Email'
-                        required
-                        name="email"
-                        ref={register}
-                        style={{ width: '60%' }}
-                    >
-                    </Form.Control>
-                </Form.Group>
 
-                <Form.Group controlId='password'>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                        type="password"
-                        placeholder='Enter Password'
-                        required
-                        name="password"
-                        ref={register}
-                        style={{ width: '60%' }}
-                    >
-                    </Form.Control>
-                </Form.Group>
+            <Row>
 
-                <Button type='submit' variant='primary'>Sign In</Button>
-
-            </Form>
-
-            <Row className='py-3'>
                 <Col>
-                    Don't have an account? <Link to='/register'>Sign Up</Link>
+                    <Image src={one} fluid style={{ paddingTop: '3%', borderRadius: '7%' }} />
+                </Col>
+
+                <Col>
+                    <h1 style={{ padding: '1rem 0' }}><i className="fas fa-user"></i> Sign Into Your Account</h1>
+                    <Form className='py-3'
+                        onSubmit={handleSubmit(onSubmit)}
+                    >
+                        <Form.Group controlId='email'>
+                            <Form.Label>Email Address</Form.Label>
+                            <Form.Control
+                                type="email"
+                                placeholder='Enter Email'
+                                required
+                                name="email"
+                                ref={register}
+                            >
+                            </Form.Control>
+                        </Form.Group>
+
+                        <Form.Group controlId='password'>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder='Enter Password'
+                                required
+                                name="password"
+                                ref={register}
+                            >
+                            </Form.Control>
+                        </Form.Group>
+
+                        <Button type='submit' variant='primary'>Sign In</Button>
+
+                    </Form>
+
+                    <Row className='py-3'>
+                        <Col>
+                            Don't have an account? <Link to='/register'>Sign Up</Link>
+                        </Col>
+                    </Row>
+
                 </Col>
             </Row>
+
 
         </Container>
     )
