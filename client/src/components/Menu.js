@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Container, Row, Col, Card, Image, ListGroup } from 'react-bootstrap';
 import '../style/MenuStyle.css';
 import china from '../images/flags/china.png';
 import euro from '../images/flags/euro.jpg';
@@ -8,7 +9,7 @@ import mex from '../images/flags/mex.jpg';
 import mideast from '../images/flags/mideast.png';
 import thai from '../images/flags/thai.png';
 
-const Menu = () => {
+const Menu = ({ imageStyle }) => {
 
     const [indianMenu, setIndianMenu] = useState([]);
     const [indoChineseMenu, setIndoChineseMenu] = useState([]);
@@ -66,48 +67,72 @@ const Menu = () => {
     cleanUp(sssMenu, sssDisplay);
 
     return (
+        <Container className="main_cont">
+            <Row md={3} sm={2}>
+                <Col className='menu_col'>
+                    <Card className="py-3">
+                        <div style={{ margin: 'auto' }}>
+                            <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indo-Mexican  <img className='img_menu' src={mex} alt="mex" /></strong></h4>
+                        </div>
+                        <ListGroup>
+                            {indoMexicanDisplay.map((item, i) => <ListGroup.Item key={i}>{item} </ListGroup.Item>)}
+                        </ListGroup>
+                    </Card>
+                </Col>
+                <Col className='menu_col'>
+                    <Card className="py-3">
+                        <div style={{ margin: 'auto' }}>
+                            <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indo-Chinese  <img className='img_menu' src={china} alt="china" /></strong></h4>
+                        </div>
+                        <ListGroup>
+                            {indoChineseDisplay.map((item, i) => <ListGroup.Item key={i}>{item} </ListGroup.Item>)}
+                        </ListGroup>
+                    </Card>
+                </Col>
+                <Col className='menu_col'>
+                    <Card className="py-3">
+                        <div style={{ margin: 'auto' }}>
+                            <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indo-European  <img className='img_menu' src={euro} alt="euro" /></strong></h4>
+                        </div>
+                        <ListGroup>
+                            {indoEuropeanDisplay.map((item, i) => <ListGroup.Item key={i}>{item} </ListGroup.Item>)}
+                        </ListGroup>
+                    </Card>
+                </Col>
+                <Col className='menu_col'>
+                    <Card className="py-3">
+                        <div style={{ margin: 'auto' }}>
+                            <h4 className='menu_title'><strong><img className='img_menu' src={mideast} alt="mideast" /> Middle Eastern </strong></h4>
+                        </div>
+                        <ListGroup>
+                            {middleEasternDisplay.map((item, i) => <ListGroup.Item key={i}>{item} </ListGroup.Item>)}
+                        </ListGroup>
+                    </Card>
+                </Col>
+                <Col className='menu_col'>
+                    <Card className="py-3">
+                        <div style={{ margin: 'auto' }}>
+                            <h4 className='menu_title'><strong>Soups and Salads</strong></h4>
+                        </div>
+                        <ListGroup>
+                            {sssDisplay.map((item, i) => <ListGroup.Item key={i}>{item} </ListGroup.Item>)}
+                        </ListGroup>
+                    </Card>
+                </Col>
+                <Col className='menu_col'>
+                    <Card className="py-3">
+                        <div style={{ margin: 'auto' }}>
+                            <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indian </strong></h4>
+                        </div>
+                        <ListGroup>
+                            {indianDisplay.map((item, i) => <ListGroup.Item key={i}>{item} </ListGroup.Item>)}
+                        </ListGroup>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
 
-        <div className='container'>
 
-            <div className='flex_container'>
-
-                <div className='menu_box'>
-                    <p className='menu_title'><strong><img className='image' src={india} alt="india" /> Indo-Mexican  <img className='image' src={mex} alt="mex" /></strong></p>
-                    {indoMexicanDisplay.map((item, i) => <p key={i}>{item} </p>)}
-                </div>
-
-                <div className='menu_box'>
-                    <p className='menu_title'><strong><img className='image' src={india} alt="india" /> Indo-Chinese <img className='image' src={china} alt="china" /> /  <img className='image' src={thai} alt="thai" /> Thai Inspired</strong></p>
-                    {indoChineseDisplay.map((item, i) => <p key={i}>{item} </p>)}
-                </div>
-
-                <div className='menu_box'>
-                    <p className='menu_title'><strong> <img className='image' src={india} alt="india" /> Indo-European <img className='image' src={euro} alt="euro" /></strong></p>
-                    {indoEuropeanDisplay.map((item, i) => <p key={i}>{item} </p>)}
-                </div>
-
-                <div className='menu_box'>
-                    <p className='menu_title'><strong><img className='image' src={mideast} alt="mideast" /> Middle Eastern</strong></p>
-                    {middleEasternDisplay.map((item, i) => <p key={i}>{item} </p>)}
-                </div>
-
-                <div className='menu_box'>
-                    <p className='menu_title'><strong>Sandwiches/ Soups/ Salads</strong></p>
-                    {sssDisplay.map((item, i) => <p key={i}>{item} </p>)}
-                </div>
-
-                <div className='menu_box'>
-                    <p className='menu_title'><strong><img className='image' src={india} alt="india" /> Indian</strong></p>
-                    {indianDisplay.map((item, i) => <p key={i}>{item} </p>)}
-                </div>
-
-            </div>
-
-            <br></br>
-            <br></br>
-            <br></br>
-
-        </div>
     )
 }
 

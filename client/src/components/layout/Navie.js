@@ -11,7 +11,7 @@ export const Navie = props => {
                 <Container>
                     <Navbar.Brand>
                         <Link to='/'>
-                            <p>EatKraveLove <small>by Chef Sank</small></p>
+                            <h4>EatKraveLove</h4><small>by Chef Sank</small>
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
