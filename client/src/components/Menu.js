@@ -95,7 +95,7 @@ const Menu = ({ imageStyle }) => {
                 </Col>
                 <Col className='menu_col'>
                     <Card
-                        className="px-1 py-1"
+                        className="py-3"
                     >
                         <div style={{ margin: 'auto' }}>
                             <h4 className='menu_title'><strong><img className='img_menu' src={india} alt="india" /> Indo-European  <img className='img_menu' src={euro} alt="euro" /></strong></h4>

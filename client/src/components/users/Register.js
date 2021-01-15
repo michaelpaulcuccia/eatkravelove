@@ -65,7 +65,6 @@ const Register = () => {
                                 required
                                 name="name"
                                 ref={register}
-                                style={{ width: '60%' }}
                             >
                             </Form.Control>
                         </Form.Group>
@@ -78,7 +77,6 @@ const Register = () => {
                                 required
                                 name="email"
                                 ref={register}
-                                style={{ width: '60%' }}
                             >
                             </Form.Control>
                         </Form.Group>
@@ -91,7 +89,6 @@ const Register = () => {
                                 required
                                 name="password"
                                 ref={register}
-                                style={{ width: '60%' }}
                             >
                             </Form.Control>
                         </Form.Group>

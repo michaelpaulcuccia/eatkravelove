@@ -10,8 +10,8 @@ export const Navie = props => {
             <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand>
-                        <Link to='/'>
-                            <h4>EatKraveLove</h4><small>by Chef Sank</small>
+                        <Link to='/' style={{ fontSize: '2rem' }}>
+                            EatKraveLove
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,18 +19,18 @@ export const Navie = props => {
                         <Nav className="ml-auto">
                             {props.hideRegisterLogin &&
                                 <>
-                                    <Nav.Link as={Link} to='/register' className='little_linkies' >
+                                    <Nav.Link as={Link} to='/register' style={{ fontSize: '1.35rem' }}>
                                         Register
                                 </Nav.Link>
-                                    <Nav.Link as={Link} to='/login' className='little_linkies' >
+                                    <Nav.Link as={Link} to='/login' style={{ fontSize: '1.35rem' }}>
                                         Login
                                 </Nav.Link>
                                 </>
                             }
-                            <Nav.Link as={Link} to='/menu'  >
+                            <Nav.Link as={Link} to='/menu' style={{ fontSize: '1.35rem' }}>
                                 Menu
                                 </Nav.Link>
-                            <Nav.Link as={Link} to='/about'  >
+                            <Nav.Link as={Link} to='/about' style={{ fontSize: '1.35rem' }}>
                                 About
                               </Nav.Link>
                             {props.showHiddenTabs &&

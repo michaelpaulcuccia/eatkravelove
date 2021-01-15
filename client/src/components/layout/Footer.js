@@ -13,7 +13,7 @@ const Footer = () => {
                         href='https://www.instagram.com/eatkravelove/?hl=en'
                         target="_blank"
                         rel="noreferrer"
-                        style={{ fontSize: '20px' }}
+                        style={{ fontSize: '1.45' }}
                     > Follow on Instagram
                 </a>
                 </Navbar.Brand>
@@ -25,7 +25,7 @@ const Footer = () => {
                         href='https://www.linkedin.com/in/sanketa-jain-86b3222a/'
                         target="_blank"
                         rel="noreferrer"
-                        style={{ fontSize: '20px' }}
+                        style={{ fontSize: '1.45' }}
                     > Follow on LinkedIn
                 </a>
                 </Navbar.Brand>

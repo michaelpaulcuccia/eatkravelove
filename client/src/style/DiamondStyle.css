@@ -1,0 +1,32 @@
+.main_div {
+  overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    margin-top: 10%;
+}
+  
+  .diamond_container {
+    position: relative;
+    flex-grow: 1;
+    margin: auto;
+    max-width: 1400px;
+    max-height: 1400px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2vmin;
+    justify-items: center;
+    align-items: center;
+  }
+  
+.diamond_img {
+    z-index: 1;
+    grid-column: span 2;
+    max-width: 100%;
+    margin-bottom: -52%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: scale(1);
+    transition: all .25s; 
+  }
+  

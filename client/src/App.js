@@ -9,6 +9,7 @@ import Logout from './components/users/Logout';
 import OrderForm from './components/order/OrderForm';
 import About from './components/About';
 import Menu from './components/Menu';
+import './style/Main.css';
 
 const App = () => {
 
