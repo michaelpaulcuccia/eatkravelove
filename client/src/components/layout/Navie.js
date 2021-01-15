@@ -34,12 +34,12 @@ export const Navie = props => {
                                 About
                               </Nav.Link>
                             {props.showHiddenTabs &&
-                                <NavDropdown title="User Options" id="basic-nav-dropdown">
-                                    <NavDropdown.Item as={Link} to='/orderform'>
+                                <NavDropdown title="User Options" id="basic-nav-dropdown" style={{ fontSize: '1.35rem' }}>
+                                    <NavDropdown.Item as={Link} to='/orderform' style={{ fontSize: '1.35rem' }}>
                                         Catering
                                 </NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item as={Link} to='/logout'>
+                                    <NavDropdown.Item as={Link} to='/logout' style={{ fontSize: '1.35rem' }}>
                                         Logout
                                     </NavDropdown.Item>
                                 </NavDropdown>
