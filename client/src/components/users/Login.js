@@ -4,7 +4,7 @@ import UserContext from '../../context/UserContext';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { Container, Form, Button, Row, Col, Image } from 'react-bootstrap';
-import one from '../../images/landing/one.PNG'
+import five from '../../images/food/five.png'
 
 const Login = props => {
 
@@ -58,11 +58,10 @@ const Login = props => {
 
         <Container>
 
-
             <Row>
 
                 <Col>
-                    <Image src={one} fluid style={{ paddingTop: '3%', borderRadius: '7%' }} />
+                    <Image src={five} fluid style={{ paddingTop: '3%', borderRadius: '7%' }} />
                 </Col>
 
                 <Col>
