@@ -60,11 +60,14 @@ const OrderForm = () => {
 
     }
 
+    //let localToken = localStorage.getItem('x-auth-token')
+    //console.log(localToken) 
+    //null
+
     return (
 
-
         <div>
-            { token && !token == null ? (<Container className='py-3'>
+            { token && token !== null ? (<Container className='py-3'>
 
                 <h1
                     style={{ textAlign: 'center' }}
